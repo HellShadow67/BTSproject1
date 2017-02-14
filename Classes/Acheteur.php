@@ -14,7 +14,7 @@ class Acheteur
         
       /*  function __construct()
         {
-               $this->idAcheteur ='';
+        $this->idAcheteur ='';
 		$this->login = '';
 		$this->pwd = '';
 		$this->raisonSocEnt = '';

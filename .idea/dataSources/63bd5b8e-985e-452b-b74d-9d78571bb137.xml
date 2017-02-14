@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="laCriee@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="lacriee">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="sakila"/>
+    <schema id="7" parent="1" name="sys"/>
+    <schema id="8" parent="1" name="world"/>
+    <table id="9" parent="2" name="acheteur"/>
+    <table id="10" parent="2" name="bac"/>
+    <table id="11" parent="2" name="bateau"/>
+    <table id="12" parent="2" name="espece"/>
+    <table id="13" parent="2" name="lot"/>
+    <table id="14" parent="2" name="peche"/>
+    <table id="15" parent="2" name="poster"/>
+    <table id="16" parent="2" name="presentation"/>
+    <table id="17" parent="2" name="qualite"/>
+    <table id="18" parent="2" name="taille"/>
+    <column id="19" parent="9" name="idAcheteur">
+      <Position>1</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="20" parent="9" name="login">
+      <Position>2</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="21" parent="9" name="pwd">
+      <Position>3</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="22" parent="9" name="raisonSocEnt">
+      <Position>4</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="23" parent="9" name="adresse">
+      <Position>5</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="24" parent="9" name="ville">
+      <Position>6</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="25" parent="9" name="cp">
+      <Position>7</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="26" parent="9" name="numHabillitation">
+      <Position>8</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <key id="27" parent="9" name="PRIMARY">
+      <ColNames>idAcheteur</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="28" parent="10" name="idBac">
+      <Position>1</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="10" name="tare">
+      <Position>2</Position>
+      <DataType>decimal(10)|0</DataType>
+    </column>
+    <key id="30" parent="10" name="PRIMARY">
+      <ColNames>idBac</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="31" parent="11" name="idBateau">
+      <Position>1</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="11" name="nomBateau">
+      <Position>2</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="33" parent="11" name="ImmatriculationBateau">
+      <Position>3</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <key id="34" parent="11" name="PRIMARY">
+      <ColNames>idBateau</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="35" parent="12" name="idEsp">
+      <Position>1</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="12" name="nomComm">
+      <Position>2</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="37" parent="12" name="nomScient">
+      <Position>3</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="38" parent="12" name="codeEsp">
+      <Position>4</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <key id="39" parent="12" name="PRIMARY">
+      <ColNames>idEsp</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="40" parent="13" name="datePeche">
+      <Position>1</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="13" name="idBateau">
+      <Position>2</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="13" name="idLot">
+      <Position>3</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="13" name="idEsp">
+      <Position>4</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="44" parent="13" name="idTaille">
+      <Position>5</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="45" parent="13" name="idPrep">
+      <Position>6</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="46" parent="13" name="idQual">
+      <Position>7</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="47" parent="13" name="idBac">
+      <Position>8</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="48" parent="13" name="poidsBrutLot">
+      <Position>9</Position>
+      <DataType>decimal(10)|0</DataType>
+    </column>
+    <column id="49" parent="13" name="prixEnchere">
+      <Position>10</Position>
+      <DataType>decimal(10)|0</DataType>
+    </column>
+    <column id="50" parent="13" name="dateEnchere">
+      <Position>11</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="51" parent="13" name="heureDebutEnchere">
+      <Position>12</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="52" parent="13" name="prixPlancher">
+      <Position>13</Position>
+      <DataType>decimal(10)|0</DataType>
+    </column>
+    <column id="53" parent="13" name="PrixDepart">
+      <Position>14</Position>
+      <DataType>decimal(10)|0</DataType>
+    </column>
+    <column id="54" parent="13" name="codeEtat">
+      <Position>15</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="55" parent="13" name="idAcheteur">
+      <Position>16</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="56" parent="13" name="idFacture">
+      <Position>17</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <index id="57" parent="13" name="FK_Lot_datePeche">
+      <ColNames>datePeche</ColNames>
+    </index>
+    <index id="58" parent="13" name="FK_Lot_idBac">
+      <ColNames>idBac</ColNames>
+    </index>
+    <index id="59" parent="13" name="FK_Lot_idBateau">
+      <ColNames>idBateau</ColNames>
+    </index>
+    <index id="60" parent="13" name="FK_Lot_idEsp">
+      <ColNames>idEsp</ColNames>
+    </index>
+    <index id="61" parent="13" name="FK_Lot_idPrep">
+      <ColNames>idPrep</ColNames>
+    </index>
+    <index id="62" parent="13" name="FK_Lot_idQual">
+      <ColNames>idQual</ColNames>
+    </index>
+    <index id="63" parent="13" name="FK_Lot_idTaille">
+      <ColNames>idTaille</ColNames>
+    </index>
+    <key id="64" parent="13" name="PRIMARY">
+      <ColNames>idLot
+datePeche
+idBateau</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="65" parent="13" name="FK_Lot_datePeche">
+      <ColNames>datePeche</ColNames>
+      <RefSchemaName>lacriee</RefSchemaName>
+      <RefTableName>peche</RefTableName>
+      <RefColNames>datePeche</RefColNames>
+    </foreign-key>
+    <foreign-key id="66" parent="13" name="FK_Lot_idBateau">
+      <ColNames>idBateau</ColNames>
+      <RefSchemaName>lacriee</RefSchemaName>
+      <RefTableName>bateau</RefTableName>
+      <RefColNames>idBateau</RefColNames>
+    </foreign-key>
+    <foreign-key id="67" parent="13" name="FK_Lot_idEsp">
+      <ColNames>idEsp</ColNames>
+      <RefSchemaName>lacriee</RefSchemaName>
+      <RefTableName>espece</RefTableName>
+      <RefColNames>idEsp</RefColNames>
+    </foreign-key>
+    <foreign-key id="68" parent="13" name="FK_Lot_idTaille">
+      <ColNames>idTaille</ColNames>
+      <RefSchemaName>lacriee</RefSchemaName>
+      <RefTableName>taille</RefTableName>
+      <RefColNames>idTaille</RefColNames>
+    </foreign-key>
+    <foreign-key id="69" parent="13" name="FK_Lot_idPrep">
+      <ColNames>idPrep</ColNames>
+      <RefSchemaName>lacriee</RefSchemaName>
+      <RefTableName>presentation</RefTableName>
+      <RefColNames>idPrep</RefColNames>
+    </foreign-key>
+    <foreign-key id="70" parent="13" name="FK_Lot_idQual">
+      <ColNames>idQual</ColNames>
+      <RefSchemaName>lacriee</RefSchemaName>
+      <RefTableName>qualite</RefTableName>
+      <RefColNames>idQual</RefColNames>
+    </foreign-key>
+    <foreign-key id="71" parent="13" name="FK_Lot_idBac">
+      <ColNames>idBac</ColNames>
+      <RefSchemaName>lacriee</RefSchemaName>
+      <RefTableName>bac</RefTableName>
+      <RefColNames>idBac</RefColNames>
+    </foreign-key>
+    <column id="72" parent="14" name="datePeche">
+      <Position>1</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="73" parent="14" name="idBateau">
+      <Position>2</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="74" parent="14" name="FK_Peche_idBateau">
+      <ColNames>idBateau</ColNames>
+    </index>
+    <key id="75" parent="14" name="PRIMARY">
+      <ColNames>datePeche
+idBateau</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="76" parent="14" name="FK_Peche_idBateau">
+      <ColNames>idBateau</ColNames>
+      <RefSchemaName>lacriee</RefSchemaName>
+      <RefTableName>bateau</RefTableName>
+      <RefColNames>idBateau</RefColNames>
+    </foreign-key>
+    <column id="77" parent="15" name="datePeche">
+      <Position>1</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="78" parent="15" name="idBateau">
+      <Position>2</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="79" parent="15" name="idLot">
+      <Position>3</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="80" parent="15" name="idAcheteur">
+      <Position>4</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="81" parent="15" name="prixEnchere">
+      <Position>5</Position>
+      <DataType>decimal(10)|0</DataType>
+    </column>
+    <column id="82" parent="15" name="heureEnchere">
+      <Position>6</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <index id="83" parent="15" name="FK_Poster_datePeche">
+      <ColNames>datePeche</ColNames>
+    </index>
+    <index id="84" parent="15" name="FK_Poster_idAcheteur">
+      <ColNames>idAcheteur</ColNames>
+    </index>
+    <index id="85" parent="15" name="FK_Poster_idBateau">
+      <ColNames>idBateau</ColNames>
+    </index>
+    <key id="86" parent="15" name="PRIMARY">
+      <ColNames>idLot
+datePeche
+idBateau
+idAcheteur</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="87" parent="15" name="FK_Poster_datePeche">
+      <ColNames>datePeche</ColNames>
+      <RefSchemaName>lacriee</RefSchemaName>
+      <RefTableName>peche</RefTableName>
+      <RefColNames>datePeche</RefColNames>
+    </foreign-key>
+    <foreign-key id="88" parent="15" name="FK_Poster_idBateau">
+      <ColNames>idBateau</ColNames>
+      <RefSchemaName>lacriee</RefSchemaName>
+      <RefTableName>bateau</RefTableName>
+      <RefColNames>idBateau</RefColNames>
+    </foreign-key>
+    <foreign-key id="89" parent="15" name="FK_Poster_idLot">
+      <ColNames>idLot</ColNames>
+      <RefSchemaName>lacriee</RefSchemaName>
+      <RefTableName>lot</RefTableName>
+      <RefColNames>idLot</RefColNames>
+    </foreign-key>
+    <foreign-key id="90" parent="15" name="FK_Poster_idAcheteur">
+      <ColNames>idAcheteur</ColNames>
+      <RefSchemaName>lacriee</RefSchemaName>
+      <RefTableName>acheteur</RefTableName>
+      <RefColNames>idAcheteur</RefColNames>
+    </foreign-key>
+    <column id="91" parent="16" name="idPrep">
+      <Position>1</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="92" parent="16" name="libellePrep">
+      <Position>2</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <key id="93" parent="16" name="PRIMARY">
+      <ColNames>idPrep</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="94" parent="17" name="idQual">
+      <Position>1</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="95" parent="17" name="libelleQual">
+      <Position>2</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <key id="96" parent="17" name="PRIMARY">
+      <ColNames>idQual</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="97" parent="18" name="idTaille">
+      <Position>1</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="98" parent="18" name="Specification">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="99" parent="18" name="PRIMARY">
+      <ColNames>idTaille</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

@@ -6,10 +6,10 @@
 # Base de données: BDD
 #------------------------------------------------------------
 
-DROP database IF EXISTS Poulgoazec;
-CREATE DATABASE Poulgoazec;
+DROP database IF EXISTS lacriee;
+CREATE DATABASE lacriee;
 
-use Poulgoazec;
+use lacriee;
 
 #------------------------------------------------------------
 # Table: Taille
@@ -39,7 +39,7 @@ CREATE TABLE Qualite(
 
 CREATE TABLE Bac(
         idBac Varchar (25) NOT NULL ,
-        tare  Decimal ,
+        tare  float ,
         PRIMARY KEY (idBac )
 )ENGINE=InnoDB;
 
@@ -88,7 +88,7 @@ CREATE TABLE Acheteur(
   idAcheteur       Varchar (25) NOT NULL ,
   login            Varchar (25) ,
   pwd              Varchar (25) ,
-  raisonSocEnt     Varchar (25) ,
+  raisonSocEnt     Varchar (50) ,
   adresse          Varchar (25) ,
   ville            Varchar (25) ,
   cp               Varchar (25) ,
@@ -118,20 +118,20 @@ CREATE TABLE Crieur(
 #------------------------------------------------------------
 
 CREATE TABLE Lot(
-		datePeche         Date NOT NULL ,
+		    datePeche         Date NOT NULL ,
         idBateau          Varchar (25) NOT NULL ,
         idLot             Varchar (25) NOT NULL ,
-		idEsp             Varchar (25) ,
-		idTaille          Varchar (25) ,
-		idPrep            Varchar (25) ,
-		idQual            Varchar (25) ,
+	    	idEsp             Varchar (25) ,
+	    	idTaille          int,
+		    idPrep            Varchar (25) ,
+	    	idQual            Varchar (25) ,
         idBac             Varchar (25) ,		
-        poidsBrutLot      Decimal ,
-        prixEnchere       Decimal , 
+        poidsBrutLot      float ,
+        prixEnchere       float ,
         dateEnchere       Date ,
         heureDebutEnchere Datetime ,
-        prixPlancher        Decimal ,		
-        PrixDepart      Decimal ,
+        prixPlancher        float ,
+        PrixDepart      float ,
         codeEtat          Varchar (25) ,
         idAcheteur        Varchar (25) ,
         idFacture         Varchar (25) ,
@@ -158,11 +158,11 @@ CREATE TABLE Presentation(
 
 CREATE TABLE Poster(
         datePeche    Date NOT NULL ,
-		idBateau     Varchar (25) NOT NULL ,
+		    idBateau     Varchar (25) NOT NULL ,
         idLot        Varchar (25) NOT NULL ,
         idAcheteur   Varchar (25) NOT NULL ,
-		prixEnchere  Decimal ,
-		heureEnchere datetime,
+	    	prixEnchere  float ,
+	    	heureEnchere datetime,
         PRIMARY KEY (idLot ,datePeche ,idBateau ,idAcheteur )
 )ENGINE=InnoDB;
 
@@ -191,5 +191,5 @@ create user 'Admin'@'localhost' identified by 'admin123';
 create user 'Visiteur'@'localhost' identified by 'visiteur123';
 
 
-grant all on Poulgoazec.* to 'Admin'@'localhost';
-grant select on Poulgoazec.* to 'Visiteur'@'localhost';
+grant all on lacriee.* to 'Admin'@'localhost';
+grant select on lacriee.* to 'Visiteur'@'localhost';
