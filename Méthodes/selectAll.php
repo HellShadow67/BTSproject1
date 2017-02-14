@@ -7,22 +7,22 @@
 
 <?php
 
-require('Acheteur.php');
-		require('Bateau.php');
-        require('Bac.php');
-        require('Espece.php');
-        require('Lot.php');
-        require('Peche.php');
-        require('Poster.php');
-        require('Presentation.php');
-        require('Qualite.php');
-        require('etape_7_taille .php');
+        require('../Classes/Acheteur.php');
+		require('../Classes/Bateau.php');
+        require('../Classes/Bac.php');
+        require('../Classes/Espece.php');
+        require('../Classes/Lot.php');
+        require('../Classes/Peche.php');
+        require('../Classes/Poster.php');
+        require('../Classes/Presentation.php');
+        require('../Classes/Qualite.php');
+        require('../Classes/Taille.php');
 		
 $tables=array('acheteur','bateau','bac','espece','lot','peche','poster','preparation','qualite','taille');
 //fonction(nomtable) avec boucle 
  try
  {
-     $bdd = new PDO('mysql:host=localhost;dbname=Poulgoazec;charset=utf8','root','');
+     $bdd = new PDO('mysql:host=localhost;dbname=lacriee;charset=utf8','root','');
 		
       	
 	$tab = array();
