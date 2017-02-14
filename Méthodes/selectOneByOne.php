@@ -7,7 +7,7 @@
 	function infoBateau() {
 		try
 		{
-			$bdd = new PDO('mysql:host=localhost;dbname=Poulgoazec','root','');
+			$bdd = new PDO('mysql:host=localhost;dbname=lacriee;charset=utf8','root','');
 			$sql ='SELECT * FROM bateau;';
 			$req = $bdd->query($sql);
 			$req->setFetchMode(PDO::FETCH_ASSOC);
@@ -27,7 +27,7 @@
 	function infoBac() {
 		try
 		{
-			$bdd = new PDO('mysql:host=localhost;dbname=Poulgoazec','root','');
+			$bdd = new PDO('mysql:host=localhost;dbname=lacriee;charset=utf8','root','');
 			$sql ='SELECT * FROM bac;';
 			$req = $bdd->query($sql);
 			$req->setFetchMode(PDO::FETCH_ASSOC);
@@ -47,7 +47,7 @@
 	function infoTaille() {
 		try
 		{
-			$bdd = new PDO('mysql:host=localhost;dbname=Poulgoazec','root','');
+			$bdd = new PDO('mysql:host=localhost;dbname=lacriee;charset=utf8','root','');
 			$sql ='SELECT * FROM taille;';
 			$req = $bdd->query($sql);
 			$req->setFetchMode(PDO::FETCH_ASSOC);
@@ -67,7 +67,7 @@
 	function infoPreparation() {
 		try
 		{
-			$bdd = new PDO('mysql:host=localhost;dbname=Poulgoazec','root','');
+			$bdd = new PDO('mysql:host=localhost;dbname=lacriee;charset=utf8','root','');
 			$sql ='SELECT * FROM preparation;';
 			$req = $bdd->query($sql);
 			$req->setFetchMode(PDO::FETCH_ASSOC);
@@ -87,7 +87,7 @@
 	function infoQualite() {
 		try
 		{
-			$bdd = new PDO('mysql:host=localhost;dbname=Poulgoazec','root','');
+			$bdd = new PDO('mysql:host=localhost;dbname=lacriee;charset=utf8','root','');
 			$sql ='SELECT * FROM qualite;';
 			$req = $bdd->query($sql);
 			$req->setFetchMode(PDO::FETCH_ASSOC);
@@ -107,7 +107,7 @@
 	function infoPeche() {
 		try
 		{
-			$bdd = new PDO('mysql:host=localhost;dbname=Poulgoazec','root','');
+			$bdd = new PDO('mysql:host=localhost;dbname=lacriee;charset=utf8','root','');
 			$sql ='SELECT * FROM peche;';
 			$req = $bdd->query($sql);
 			$req->setFetchMode(PDO::FETCH_ASSOC);
@@ -127,7 +127,7 @@
 	function infoPoster() {
 		try
 		{
-			$bdd = new PDO('mysql:host=localhost;dbname=Poulgoazec','root','');
+			$bdd = new PDO('mysql:host=localhost;dbname=lacriee;charset=utf8','root','');
 			$sql ='SELECT * FROM poster;';
 			$req = $bdd->query($sql);
 			$req->setFetchMode(PDO::FETCH_ASSOC);
@@ -147,7 +147,7 @@
 	function infoEspece() {
 		try
 		{
-			$bdd = new PDO('mysql:host=localhost;dbname=Poulgoazec','root','');
+			$bdd = new PDO('mysql:host=localhost;dbname=lacriee;charset=utf8','root','');
 			$sql ='SELECT * FROM espece;';
 			$req = $bdd->query($sql);
 			$req->setFetchMode(PDO::FETCH_ASSOC);
@@ -167,7 +167,7 @@
 	function infoAcheteur() {
 		try
 		{
-			$bdd = new PDO('mysql:host=localhost;dbname=Poulgoazec','root','');
+			$bdd = new PDO('mysql:host=localhost;dbname=lacriee;charset=utf8','root','');
 			$sql ='SELECT * FROM acheteur;';
 			$req = $bdd->query($sql);
 			$req->setFetchMode(PDO::FETCH_ASSOC);
@@ -187,7 +187,7 @@
 	function infoLot() {
 		try
 		{
-			$bdd = new PDO('mysql:host=localhost;dbname=Poulgoazec','root','');
+			$bdd = new PDO('mysql:host=localhost;dbname=lacriee;charset=utf8','root','');
 			$sql ='SELECT * FROM lot;';
 			$req = $bdd->query($sql);
 			$req->setFetchMode(PDO::FETCH_ASSOC);

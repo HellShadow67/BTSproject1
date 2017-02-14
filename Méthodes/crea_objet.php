@@ -6,7 +6,7 @@
 
 <?php
 
-require('etape_7_taille .php');
+require('../Classes/Taille.php');
 
 $taille = new Taille();
 $taille->setId('17');
@@ -19,7 +19,7 @@ echo '<br/>'.$taille->__toString().'<br/>';
 
 echo '<br/><br/>';
 
-require('Qualite.php');
+require('../Classes/Qualite.php');
 
 $Qualite = new Qualite();
 $Qualite->setId('Z');
@@ -32,7 +32,7 @@ echo '<br/>'.$Qualite->__toString();
 
 echo '<br/><br/>';
 
-require('Poster.php');
+require('../Classes/Poster.php');
 
 $Poster = new Poster();
 $Poster->setAll('12/06/2011','121aze12','14','1',12.3,'12:45');
@@ -42,7 +42,7 @@ echo '<br/>'.$Poster->__toString();
 
 echo '<br/><br/>';
 
-require('Lot.php');
+require('../Classes/Lot.php');
 
 $Lot = new Lot();
 $Lot->setAll('12/07/2014','1','1','1','1','1','1','1',2.35,12.5,'13/07/2014','12:50',12.7,8,'E','1','1');
@@ -52,7 +52,7 @@ echo '<br/>'.$Lot->__toString();
 
 echo '<br/><br/>';
 
-require('Peche.php');
+require('../Classes/Peche.php');
 
 $Peche = new Peche();
 
@@ -65,7 +65,7 @@ echo '<br/>'.$Peche->__toString();
 
 echo '<br/><br/>';
 
-require('Bateau.php');
+require('../Classes/Bateau.php');
 
 $Bateau = new Bateau();
 
@@ -78,7 +78,7 @@ echo '<br/>'.$Bateau->__toString();
 
 echo '<br/><br/>';
 
-require('Acheteur.php');
+require('../Classes/Acheteur.php');
 
 $Acheteur = new Acheteur();
 
@@ -91,7 +91,7 @@ echo '<br/>'.$Acheteur->__toString();
 
 echo '<br/><br/>';
 
-require('Espece.php');
+require('../Classes/Espece.php');
 
 $Espece = new Espece('1','Lotte','Lottus','1');
 
@@ -102,7 +102,7 @@ echo '<br/>'.$Espece->__toString();
 
 echo '<br/><br/>';
 
-require('Bac.php');
+require('../Classes/Bac.php');
 
 $Bac = new Bac('1',4.5);
 
@@ -113,7 +113,7 @@ echo '<br/>'.$Bac->__toString();
 
 echo '<br/><br/>';
 
-require('Presentation.php');
+require('../Classes/Presentation.php');
 
 $Presentation = new Presentation('1','Ecaillé');
 
