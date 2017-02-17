@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd6f4940-de84-4681-b629-8cb5bd24e834" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Methodes/selectAllAuctions.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Classes/Taille .php" afterPath="$PROJECT_DIR$/Classes/Taille.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Méthodes/crea_objet.php" afterPath="$PROJECT_DIR$/Methodes/crea_objet.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Méthodes/selectAll.php" afterPath="$PROJECT_DIR$/Methodes/selectAll.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Méthodes/selectOneByOne.php" afterPath="$PROJECT_DIR$/Methodes/selectOneByOne.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Méthodes/crea_objet.php" afterPath="$PROJECT_DIR$/Méthodes/crea_objet.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Méthodes/selectAll.php" afterPath="$PROJECT_DIR$/Méthodes/selectAll.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Méthodes/selectOneByOne.php" afterPath="$PROJECT_DIR$/Méthodes/selectOneByOne.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pages/Accueil.html" afterPath="$PROJECT_DIR$/Pages/Accueil.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pages/login.php" afterPath="$PROJECT_DIR$/Pages/login.php" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,7 +34,7 @@
       <file leaf-file-name="Accueil.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pages/Accueil.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
+            <state relative-caret-position="816">
               <caret line="48" column="10" lean-forward="false" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="10" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -68,39 +68,30 @@
       <file leaf-file-name="Donnees.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SQL/Donnees.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-510">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="selectAll.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Méthodes/selectAll.php">
+      <file leaf-file-name="selectAll.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Methodes/selectAll.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="36" lean-forward="true" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+            <state relative-caret-position="62">
+              <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="18" selection-end-column="41" />
               <folding>
-                <marker date="1487085188528" expanded="true" signature="855:869" ph="select * fro... bac" />
+                <marker date="1487262369565" expanded="true" signature="823:837" ph="select * fro... bac" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="selectOneByOne.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Méthodes/selectOneByOne.php">
+        <entry file="file://$PROJECT_DIR$/Methodes/selectOneByOne.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="633">
-              <caret line="9" column="89" lean-forward="false" selection-start-line="9" selection-start-column="89" selection-end-line="9" selection-end-column="89" />
-              <caret line="29" column="89" lean-forward="false" selection-start-line="29" selection-start-column="89" selection-end-line="29" selection-end-column="89" />
-              <caret line="49" column="89" lean-forward="false" selection-start-line="49" selection-start-column="89" selection-end-line="49" selection-end-column="89" />
-              <caret line="69" column="89" lean-forward="false" selection-start-line="69" selection-start-column="89" selection-end-line="69" selection-end-column="89" />
-              <caret line="89" column="89" lean-forward="false" selection-start-line="89" selection-start-column="89" selection-end-line="89" selection-end-column="89" />
-              <caret line="109" column="89" lean-forward="false" selection-start-line="109" selection-start-column="89" selection-end-line="109" selection-end-column="89" />
-              <caret line="129" column="89" lean-forward="false" selection-start-line="129" selection-start-column="89" selection-end-line="129" selection-end-column="89" />
-              <caret line="149" column="89" lean-forward="false" selection-start-line="149" selection-start-column="89" selection-end-line="149" selection-end-column="89" />
-              <caret line="169" column="89" lean-forward="false" selection-start-line="169" selection-start-column="89" selection-end-line="169" selection-end-column="89" />
-              <caret line="189" column="89" lean-forward="false" selection-start-line="189" selection-start-column="89" selection-end-line="189" selection-end-column="89" />
+            <state relative-caret-position="262">
+              <caret line="204" column="5" lean-forward="true" selection-start-line="190" selection-start-column="12" selection-end-line="204" selection-end-column="5" />
               <folding>
                 <marker date="1487085094633" expanded="true" signature="197:217" ph="SELECT * FRO... bateau" />
                 <marker date="1487085094633" expanded="true" signature="781:798" ph="SELECT * FRO... bac" />
@@ -118,11 +109,23 @@
         </entry>
       </file>
       <file leaf-file-name="crea_objet.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Méthodes/crea_objet.php">
+        <entry file="file://$PROJECT_DIR$/Methodes/crea_objet.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="476">
-              <caret line="28" column="34" lean-forward="true" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+              <caret line="28" column="34" lean-forward="false" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="selectAllAuctions.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Methodes/selectAllAuctions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="99">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding>
+                <marker date="1487264241234" expanded="true" signature="290:328" ph="SELECT * FRO... lot" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -147,24 +150,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pages/Style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>require('</find>
       <find>Poulgoazec</find>
       <find>$bdd = new PDO('mysql:host=localhost;dbname=lacriee','root','');</find>
       <find>../</find>
+      <find>../Classes/</find>
+      <find>require('</find>
+      <find>require('..</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -182,7 +177,9 @@
         <option value="$PROJECT_DIR$/Pages/Accueil.html" />
         <option value="$PROJECT_DIR$/Pages/login.php" />
         <option value="$PROJECT_DIR$/Méthodes/selectOneByOne.php" />
+        <option value="$PROJECT_DIR$/Classes/selectAll.php" />
         <option value="$PROJECT_DIR$/Méthodes/selectAll.php" />
+        <option value="$PROJECT_DIR$/Methodes/selectAllAuctions.php" />
       </list>
     </option>
   </component>
@@ -197,10 +194,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1358" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -217,6 +214,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -240,70 +238,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SQL" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laCriee" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laCriee" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laCriee" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laCriee" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Méthodes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laCriee" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laCriee" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laCriee" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laCriee" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Classes" />
+              <option name="myItemId" value="Methodes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -317,6 +258,11 @@
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\laCriee\Methodes" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -556,6 +502,7 @@
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
       <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -687,6 +634,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -727,16 +680,17 @@
       <option name="presentableId" value="Default" />
       <updated>1487075626511</updated>
       <workItem from="1487075630015" duration="449000" />
-      <workItem from="1487076420286" duration="5354000" />
+      <workItem from="1487076420286" duration="5603000" />
+      <workItem from="1487261510062" duration="3164000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5803000" />
+    <option name="totallyTimeSpent" value="9216000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -746,13 +700,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1962096" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3008547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13432837" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19364598" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -783,6 +737,112 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Pages/Accueil.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" column="10" lean-forward="false" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="10" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="85" />
+          <folding>
+            <marker date="1487085094565" expanded="true" signature="198:253" ph="Select pwd f... acheteur" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQL/Donnees.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Methodes/selectAll.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1487262369565" expanded="true" signature="823:837" ph="select * fro... bac" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Methodes/selectOneByOne.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3213">
+          <caret line="9" column="89" lean-forward="false" selection-start-line="9" selection-start-column="89" selection-end-line="9" selection-end-column="89" />
+          <caret line="29" column="89" lean-forward="false" selection-start-line="29" selection-start-column="89" selection-end-line="29" selection-end-column="89" />
+          <caret line="49" column="89" lean-forward="false" selection-start-line="49" selection-start-column="89" selection-end-line="49" selection-end-column="89" />
+          <caret line="69" column="89" lean-forward="false" selection-start-line="69" selection-start-column="89" selection-end-line="69" selection-end-column="89" />
+          <caret line="89" column="89" lean-forward="false" selection-start-line="89" selection-start-column="89" selection-end-line="89" selection-end-column="89" />
+          <caret line="109" column="89" lean-forward="false" selection-start-line="109" selection-start-column="89" selection-end-line="109" selection-end-column="89" />
+          <caret line="129" column="89" lean-forward="false" selection-start-line="129" selection-start-column="89" selection-end-line="129" selection-end-column="89" />
+          <caret line="149" column="89" lean-forward="false" selection-start-line="149" selection-start-column="89" selection-end-line="149" selection-end-column="89" />
+          <caret line="169" column="89" lean-forward="false" selection-start-line="169" selection-start-column="89" selection-end-line="169" selection-end-column="89" />
+          <caret line="189" column="89" lean-forward="false" selection-start-line="189" selection-start-column="89" selection-end-line="189" selection-end-column="89" />
+          <folding>
+            <marker date="1487085094633" expanded="true" signature="197:217" ph="SELECT * FRO... bateau" />
+            <marker date="1487085094633" expanded="true" signature="781:798" ph="SELECT * FRO... bac" />
+            <marker date="1487085094633" expanded="true" signature="1275:1295" ph="SELECT * FRO... taille" />
+            <marker date="1487085094633" expanded="true" signature="1808:1833" ph="SELECT * FRO... preparation" />
+            <marker date="1487085094633" expanded="true" signature="2346:2367" ph="SELECT * FRO... qualite" />
+            <marker date="1487085094633" expanded="true" signature="2866:2885" ph="SELECT * FRO... peche" />
+            <marker date="1487085094633" expanded="true" signature="3378:3398" ph="SELECT * FRO... poster" />
+            <marker date="1487085094633" expanded="true" signature="3905:3925" ph="SELECT * FRO... espece" />
+            <marker date="1487085094633" expanded="true" signature="4533:4555" ph="SELECT * FRO... acheteur" />
+            <marker date="1487085094633" expanded="true" signature="5338:5355" ph="SELECT * FRO... lot" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Methodes/crea_objet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="34" lean-forward="true" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Bac.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Acheteur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/Style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Pages/Accueil.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -825,17 +885,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Méthodes/crea_objet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="34" lean-forward="true" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pages/Accueil.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
+        <state relative-caret-position="816">
           <caret line="48" column="10" lean-forward="false" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="10" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -853,7 +905,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SQL/Donnees.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -869,19 +921,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Méthodes/selectOneByOne.php">
+    <entry file="file://$PROJECT_DIR$/Classes/selectAll.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
-          <caret line="9" column="89" lean-forward="false" selection-start-line="9" selection-start-column="89" selection-end-line="9" selection-end-column="89" />
-          <caret line="29" column="89" lean-forward="false" selection-start-line="29" selection-start-column="89" selection-end-line="29" selection-end-column="89" />
-          <caret line="49" column="89" lean-forward="false" selection-start-line="49" selection-start-column="89" selection-end-line="49" selection-end-column="89" />
-          <caret line="69" column="89" lean-forward="false" selection-start-line="69" selection-start-column="89" selection-end-line="69" selection-end-column="89" />
-          <caret line="89" column="89" lean-forward="false" selection-start-line="89" selection-start-column="89" selection-end-line="89" selection-end-column="89" />
-          <caret line="109" column="89" lean-forward="false" selection-start-line="109" selection-start-column="89" selection-end-line="109" selection-end-column="89" />
-          <caret line="129" column="89" lean-forward="false" selection-start-line="129" selection-start-column="89" selection-end-line="129" selection-end-column="89" />
-          <caret line="149" column="89" lean-forward="false" selection-start-line="149" selection-start-column="89" selection-end-line="149" selection-end-column="89" />
-          <caret line="169" column="89" lean-forward="false" selection-start-line="169" selection-start-column="89" selection-end-line="169" selection-end-column="89" />
-          <caret line="189" column="89" lean-forward="false" selection-start-line="189" selection-start-column="89" selection-end-line="189" selection-end-column="89" />
+        <state relative-caret-position="92">
+          <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Methodes/selectAll.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="18" selection-end-column="41" />
+          <folding>
+            <marker date="1487262369565" expanded="true" signature="823:837" ph="select * fro... bac" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Methodes/crea_objet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="34" lean-forward="false" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Methodes/selectOneByOne.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="204" column="5" lean-forward="true" selection-start-line="190" selection-start-column="12" selection-end-line="204" selection-end-column="5" />
           <folding>
             <marker date="1487085094633" expanded="true" signature="197:217" ph="SELECT * FRO... bateau" />
             <marker date="1487085094633" expanded="true" signature="781:798" ph="SELECT * FRO... bac" />
@@ -897,12 +966,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Méthodes/selectAll.php">
+    <entry file="file://$PROJECT_DIR$/Methodes/selectAllAuctions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="36" lean-forward="true" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+        <state relative-caret-position="99">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
-            <marker date="1487085188528" expanded="true" signature="855:869" ph="select * fro... bac" />
+            <marker date="1487264241234" expanded="true" signature="290:328" ph="SELECT * FRO... lot" />
           </folding>
         </state>
       </provider>

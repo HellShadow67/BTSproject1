@@ -19,7 +19,7 @@
         require('../Classes/Taille.php');
 		
 $tables=array('acheteur','bateau','bac','espece','lot','peche','poster','preparation','qualite','taille');
-//fonction(nomtable) avec boucle
+
  try
  {
      $bdd = new PDO('mysql:host=localhost;dbname=lacriee;charset=utf8','root','');
