@@ -13,35 +13,40 @@
     <![endif]-->
     <title>Login</title>
     <link rel="stylesheet" href="../Libs/jquery-ui.css">
+    <link rel="stylesheet" href="../Libs/bootstrap.min.css">
     <script src="../Libs/jquery-1.12.4.js"></script>
     <script src="../Libs/jquery-ui.js"></script>
     <script>
         $( function() {
             $( "#tabs" ).tabs();
         } );
+
+        function showForm() {
+
+            var showMe = document.getElementById("hiddenForm");
+            showMe.style.visibility = "visible";
+            var hideMe = document.getElementById("btnModif");
+            hideMe.style.visibility = "hidden";
+
+        }
+        function hideForm() {
+
+            var showMe = document.getElementById("btnModif");
+            showMe.style.visibility = "visible";
+            var hideMe = document.getElementById("hiddenForm");
+            hideMe.style.visibility = "hidden";
+
+        }
+
     </script>
 </head>
-<body>
+<body class="img-criee">
+
+<a class="button" href="logout.php">Déconnection</a>
 
 <h1>Mon compte</h1>
 
-<div id="tabs">
-    <ul>
-        <li><a href="#tabs-1">Profil</a></li>
-        <li><a href="#tabs-2">Proin dolor</a></li>
-        <li><a href="#tabs-3">Aenean lacinia</a></li>
-    </ul>
-    <div id="tabs-1">
-        <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
-    </div>
-    <div id="tabs-2">
-        <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
-    </div>
-    <div id="tabs-3">
-        <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
-        <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
-    </div>
-</div>
+
 
 
 
@@ -60,8 +65,110 @@ try
 
 		if($_SESSION['status']=='acheteur'){
 
+            $requete="Select login, raisonSocEnt, adresse, ville, cp, numHabillitation from acheteur where login='".$_SESSION['login']."'";
+
+            $resultat=$bdd->query($requete);
+
+            while($donnees = $resultat->fetch())
+            {
+                $acheteurLogin = $donnees['login'];
+                $acheteurRS=$donnees['raisonSocEnt'];
+                $acheteurAdr=$donnees['adresse'];
+                $acheteurVille=$donnees['ville'];
+                $acheteurCp=$donnees['cp'];
+                $acheteurNumHab=$donnees['numHabillitation'];
+            }
+
+		    echo '<div id="tabs">
+    <ul>
+        <li><a href="#tabs-1">Profil</a></li>
+        <li><a href="#tabs-2">Nouvelle enchère</a></li>
+        <li><a href="#tabs-3">Enchère en cours/à venir</a></li>
+    </ul>
+    <div id="tabs-1">
+     <p class="col-xs-5 .col-sm-6 .col-lg-4">
+     </br>
+     </br>
+        <b>Login: </b>'.$acheteurLogin.'</br>
+        <b>Raison sociale: </b> '.$acheteurRS.'</br>
+        <b>Adresse: </b>'.$acheteurAdr.'</br>
+        <span id="espace-adresse">'.$acheteurVille.'</span> </br>
+        <span id="espace-adresse">'.$acheteurCp.' </span> </br> 
+        <b>Numéro d\'habilitation: </b>'.$acheteurNumHab.'      
+     </p>
+     <p class="col-xs-7 .col-sm-6 .col-lg-8">
+     <div class="button" id="btnModif" onClick="showForm()" >Modifier</div>
+     <div class="col-xs-7 .col-sm-6 .col-lg-8" id="hiddenForm">
+     
+     <div onClick="hideForm()" class="button">Annuler</div>
+     <form method="post" action="chgmtProfil.php">
+     <table>
+     <tr>
+        <td><b>Login: </b></td>	<td> <span class="warning-msg"> &#9888; Seul l\' administrateur peut changer le login &#9888;</span></td></tr>
+       <tr><td> <b>Raison sociale: </b></td><td> <input class="input-width" type="text" name="raisSoc"  /> </td></tr>
+       <tr> <td><b>Rue: </b></td><td> <input class="input-width" type="text" name="rue"  /></td></tr>
+        <tr><td><b>Code postal: </b></td><td>  <input class="input-width" type="text" name="cp"  /></td></tr>
+       <tr><td> <b>Ville: </b> </td><td> <input class="input-width" type="text" name="ville"  /></td></tr> 
+       <tr><td> <b>Numéro d\'habilitation: </b> </td><td>  <input class="input-width" type="text" name="numHab"  /></td></tr>
+        </table>
+        <input type="submit" value="Valider" />  
+         </form>
+         </div>
+     </p>
+ 
+    </div>
+    <div id="tabs-2">
+        <p>
+        
+</p>
+    </div>
+    <div id="tabs-3">
+        <p>
+        
+</p>
+    </div>
+</div>';
+
+
             }
         elseif ($_SESSION['status']=='crieur'){
+
+            $requete2="Select login, nom, prenom, ville, cp, adresse from crieur where login='".$_SESSION['login']."'";
+            $resultat2=$bdd->query($requete2);
+
+
+            while($donnees = $resultat2->fetch())
+            {
+                $crieurLogin=$donnees['login'];
+                $crieurNom=$donnees['nom'];
+                $crieurAdr=$donnees['adresse'];
+                $crieurVille=$donnees['ville'];
+                $crieurCp=$donnees['cp'];
+                $crieurPrenom=$donnees['prenom'];
+            }
+
+            echo '<div id="tabs">
+    <ul>
+        <li><a href="#tabs-1">Profil</a></li>
+        <li><a href="#tabs-2">Nouvelle enchère</a></li>
+        <li><a href="#tabs-3">Enchère en cours/à venir</a></li>
+    </ul>
+    <div id="tabs-1">
+        <p>
+        
+</p>
+    </div>
+    <div id="tabs-2">
+        <p>
+        
+</p>
+    </div>
+    <div id="tabs-3">
+        <p>
+        
+</p>
+    </div>
+</div>';
 
         }
         else{

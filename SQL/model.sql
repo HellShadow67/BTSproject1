@@ -92,7 +92,7 @@ CREATE TABLE Acheteur(
   adresse          Varchar (25) ,
   ville            Varchar (25) ,
   cp               Varchar (25) ,
-  nimHabillitation Varchar (25) ,
+  numHabillitation Varchar (25) ,
   PRIMARY KEY (idAcheteur )
 )ENGINE=InnoDB;
 
@@ -185,7 +185,7 @@ ALTER TABLE Lot ADD CONSTRAINT FK_Lot_idCrieur FOREIGN KEY (idCrieur) REFERENCES
 
 Admin	LED1	TOUS LES DROITS au niveau de la base de données
 Visiteur	KEL1	LECTURE au niveau de la base de données
-*/
+
 
 create user 'Admin'@'localhost' identified by 'admin123';
 create user 'Visiteur'@'localhost' identified by 'visiteur123';
@@ -193,3 +193,4 @@ create user 'Visiteur'@'localhost' identified by 'visiteur123';
 
 grant all on lacriee.* to 'Admin'@'localhost';
 grant select on lacriee.* to 'Visiteur'@'localhost';
+*/
