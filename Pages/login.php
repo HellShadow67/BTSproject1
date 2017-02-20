@@ -31,17 +31,16 @@ try
 
                         if ($pwd2!=$mdp){
 
-                            header('Location: login.html?var=0');
+                            header('Location: login.html?connection=0');
                             exit();
                         }
 
                         else{
                             session_start ();
-                            // $_SESSION['login'] = $identifiant;
-                            //$_SESSION['status'] = 'crieur';
-                            //header('Location: InterfaceEnchere.php');
-                            //exit();
-                            echo 'it worked: crieur';
+                             $_SESSION['login'] = $identifiant;
+                             $_SESSION['status'] = 'crieur';
+                            header('Location: monCompte.php');
+                            exit();
 
                     }
 
@@ -49,11 +48,11 @@ try
 				else
 				{
                     session_start ();
-                   // $_SESSION['login'] = $identifiant;
-                    //$_SESSION['status'] = 'acheteur';
-					//header('Location: InterfaceEnchere.php');
-					//exit();
-                    echo 'it worked: acheteur';
+                    $_SESSION['login'] = $identifiant;
+                    $_SESSION['status'] = 'acheteur';
+                    header('Location: monCompte.php');
+					exit();
+
 				}			  
 		}
 }
