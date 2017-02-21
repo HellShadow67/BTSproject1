@@ -9,7 +9,7 @@ h1 {
 
     color: blue;
     font-size: 50px;
-    font-family: Comic Sans MS, fantasy, Arial, "Arial Black", Impact, Verdana, sans-serif;
+    font-family:  fantasy, Arial, "Arial Black", Impact, Verdana, sans-serif;
     font-weight: bold;
     text-align: center;
     padding-bottom: 50px;
@@ -123,16 +123,17 @@ td:first-child {
     font-size: 18px;
 }
 
-#table-list-enchere tr {
-    padding: 50px;
+#table-list-enchere td {
+    padding-left: 50px;
+    padding-bottom: 8px;
 }
 
 #table-list-enchere tr:nth-of-type(odd) {
     background: #eee;
 }
 
-.table-header {
-    background: #3498db;
+#table-list-enchere tr:first-child {
+    background: rgba(0, 0, 255, 0.64);
     color: white;
-    font-weight: bold;
 }
+

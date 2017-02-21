@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd6f4940-de84-4681-b629-8cb5bd24e834" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Libs/bootstrap.min.css" afterPath="$PROJECT_DIR$/Libs/bootstrap.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Libs/jquery-ui.css" afterPath="$PROJECT_DIR$/Libs/jquery-ui.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pages/monCompte.php" afterPath="$PROJECT_DIR$/Pages/monCompte.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pages/style.css" afterPath="$PROJECT_DIR$/Pages/style.css" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,7 +28,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="monCompte.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="monCompte.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pages/monCompte.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="468">
@@ -106,26 +106,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery-ui.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Libs/jquery-ui.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="916" column="22" lean-forward="false" selection-start-line="916" selection-start-column="22" selection-end-line="916" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap.min.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Libs/bootstrap.min.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="7210" column="44" lean-forward="false" selection-start-line="7210" selection-start-column="44" selection-end-line="7210" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="chgmtProfil.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pages/chgmtProfil.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -143,8 +123,18 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pages/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="61" column="29" lean-forward="false" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
+            <state relative-caret-position="153">
+              <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="14" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.min.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Libs/bootstrap.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="1457" column="3" lean-forward="false" selection-start-line="1457" selection-start-column="3" selection-end-line="1457" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -162,7 +152,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>../</find>
       <find>../Classes/</find>
       <find>require('</find>
       <find>require('..</find>
@@ -192,6 +181,7 @@
       <find>background-color: tran</find>
       <find>col-l</find>
       <find>ui-widget.ui</find>
+      <find>h1</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -222,10 +212,10 @@
         <option value="$PROJECT_DIR$/SQL/donnees.sql" />
         <option value="$PROJECT_DIR$/Pages/chgmtProfil.php" />
         <option value="$PROJECT_DIR$/SQL/model.sql" />
+        <option value="$PROJECT_DIR$/Pages/monCompte.php" />
+        <option value="$PROJECT_DIR$/Libs/jquery-ui.css" />
         <option value="$PROJECT_DIR$/Pages/style.css" />
         <option value="$PROJECT_DIR$/Libs/bootstrap.min.css" />
-        <option value="$PROJECT_DIR$/Libs/jquery-ui.css" />
-        <option value="$PROJECT_DIR$/Pages/monCompte.php" />
       </list>
     </option>
   </component>
@@ -793,15 +783,15 @@
       <workItem from="1487076420286" duration="5603000" />
       <workItem from="1487261510062" duration="3164000" />
       <workItem from="1487598198089" duration="26380000" />
-      <workItem from="1487683405007" duration="22486000" />
+      <workItem from="1487683405007" duration="23535000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58082000" />
+    <option name="totallyTimeSpent" value="59131000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1332,14 +1322,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="61" column="29" lean-forward="false" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SQL/donnees.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
@@ -1348,18 +1330,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Libs/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="7210" column="44" lean-forward="false" selection-start-line="7210" selection-start-column="44" selection-end-line="7210" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Libs/jquery-ui.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="916" column="22" lean-forward="false" selection-start-line="916" selection-start-column="22" selection-end-line="916" selection-end-column="22" />
+        <state relative-caret-position="-209">
+          <caret line="916" column="0" lean-forward="true" selection-start-line="916" selection-start-column="0" selection-end-line="916" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1437,6 +1411,22 @@
             <marker date="1487706327459" expanded="true" signature="8955:8969" ph="..." />
             <marker date="1487706327459" expanded="true" signature="9194:9265" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="14" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Libs/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="1457" column="3" lean-forward="false" selection-start-line="1457" selection-start-column="3" selection-end-line="1457" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
