@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd6f4940-de84-4681-b629-8cb5bd24e834" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Libs/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pages/chgmtProfil.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pages/logout.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Libs/jquery-ui.css" afterPath="$PROJECT_DIR$/Libs/jquery-ui.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pages/accueil.html" afterPath="$PROJECT_DIR$/Pages/accueil.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pages/monCompte.php" afterPath="$PROJECT_DIR$/Pages/monCompte.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pages/style.css" afterPath="$PROJECT_DIR$/Pages/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SQL/model.sql" afterPath="$PROJECT_DIR$/SQL/model.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pages/chgmtProfil.php" afterPath="$PROJECT_DIR$/Pages/chgmtProfil.php" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,8 +30,8 @@
       <file leaf-file-name="monCompte.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pages/monCompte.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="173" column="7" lean-forward="true" selection-start-line="173" selection-start-column="7" selection-end-line="183" selection-end-column="9" />
+            <state relative-caret-position="92">
+              <caret line="67" column="11" lean-forward="false" selection-start-line="67" selection-start-column="11" selection-end-line="79" selection-end-column="13" />
               <folding>
                 <marker date="1487634441686" expanded="true" signature="1637:1728" ph="Select login... acheteur" />
                 <marker date="1487634441686" expanded="true" signature="1637:1729" ph="Select login... acheteur" />
@@ -90,21 +83,10 @@
       <file leaf-file-name="chgmtProfil.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Pages/chgmtProfil.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pages/login.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="61" column="2" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="61" selection-end-column="2" />
+            <state relative-caret-position="416">
+              <caret line="35" column="14" lean-forward="false" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
               <folding>
-                <marker date="1487619905127" expanded="true" signature="225:280" ph="Select pwd f... acheteur" />
-                <marker date="1487619905127" expanded="true" signature="515:568" ph="Select pwd f... crieur" />
+                <marker date="1487635308355" expanded="true" signature="433:548" ph="Select login... acheteur" />
               </folding>
             </state>
           </provider>
@@ -718,12 +700,12 @@
       <workItem from="1487075630015" duration="449000" />
       <workItem from="1487076420286" duration="5603000" />
       <workItem from="1487261510062" duration="3164000" />
-      <workItem from="1487598198089" duration="25551000" />
+      <workItem from="1487598198089" duration="26176000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34767000" />
+    <option name="totallyTimeSpent" value="35392000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1173,7 +1155,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Pages/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
+        <state relative-caret-position="1037">
           <caret line="61" column="2" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="61" selection-end-column="2" />
           <folding>
             <marker date="1487619905127" expanded="true" signature="225:280" ph="Select pwd f... acheteur" />
@@ -1184,8 +1166,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Pages/monCompte.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="173" column="7" lean-forward="true" selection-start-line="173" selection-start-column="7" selection-end-line="183" selection-end-column="9" />
+        <state relative-caret-position="92">
+          <caret line="67" column="11" lean-forward="false" selection-start-line="67" selection-start-column="11" selection-end-line="79" selection-end-column="13" />
           <folding>
             <marker date="1487634441686" expanded="true" signature="1637:1728" ph="Select login... acheteur" />
             <marker date="1487634441686" expanded="true" signature="1637:1729" ph="Select login... acheteur" />
@@ -1235,9 +1217,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Pages/chgmtProfil.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="416">
+          <caret line="35" column="14" lean-forward="false" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+          <folding>
+            <marker date="1487635308355" expanded="true" signature="433:548" ph="Select login... acheteur" />
+          </folding>
         </state>
       </provider>
     </entry>

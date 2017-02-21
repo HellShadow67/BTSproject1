@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: Samanta
- * Date: 21/02/2017
- * Time: 00:15
- */
+
 session_start ();
 // $_SESSION['login']
 //$_SESSION['status']
@@ -24,6 +19,21 @@ try
 {
     if($bdd!=null) {
         if($_SESSION['status']=='acheteur'){
+
+           /* $requete="Select login, raisonSocEnt, adresse, ville, cp, numHabillitation from acheteur where login='".$_SESSION['login']."'";
+
+            $resultat=$bdd->query($requete);
+
+            while($donnees = $resultat->fetch())
+            {
+                $acheteurLogin = $donnees['login'];
+                $acheteurRS=$donnees['raisonSocEnt'];
+                $acheteurAdr=$donnees['adresse'];
+                $acheteurVille=$donnees['ville'];
+                $acheteurCp=$donnees['cp'];
+                $acheteurNumHab=$donnees['numHabillitation'];
+            }
+            */
 
         }
         elseif ($_SESSION['status']=='crieur') {
