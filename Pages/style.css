@@ -1,108 +1,108 @@
-p
-{
-	text-shadow: 2px 2px 4px white;
-	text-align: justify;
-	padding: 9px;
-    margin: 50px;
-}
-h1
-{
-
-	color: blue;
-    font-size: 50px; 
-	font-family: Comic Sans MS, fantasy, Arial, "Arial Black", Impact, Verdana, sans-serif; 
-	font-weight: bold;
-	text-align: center;
-	padding-bottom:50px;
-
-}
-
-.input-width{
-	width: 100%;
-}
-
-#hiddenForm{
-	visibility: hidden;
-}
-
-.warning-msg{
-	color: red;
-	text-decoration: blink;
-}
-
-#ul-accueil
-{
-	text-shadow: 2px 2px 4px white;
-	text-align: justify;
-	padding-left:60px;
+p {
+    text-shadow: 2px 2px 4px white;
+    text-align: justify;
+    padding: 9px;
     margin: 50px;
 }
 
+h1 {
 
-body{
-	font-size: 17px;
-	font-family: Arial,Impact,fantasy,  "Arial Black",  Verdana, sans-serif;
-	background-color: white;
-	color: black;
+    color: blue;
+    font-size: 50px;
+    font-family: Comic Sans MS, fantasy, Arial, "Arial Black", Impact, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 50px;
 
 }
 
-.img-criee
+.input-width {
+    width: 100%;
+}
 
-{
-	font-size: 17px;
-	font-family: Arial,Impact,fantasy,  "Arial Black",  Verdana, sans-serif;
+#hiddenForm {
+    visibility: hidden;
+}
+
+.warning-msg {
+    color: red;
+    text-decoration: blink;
+}
+
+#ul-accueil {
+    text-shadow: 2px 2px 4px white;
+    text-align: justify;
+    padding-left: 60px;
+    margin: 50px;
+}
+
+body {
+    font-size: 17px;
+    font-family: Arial, Impact, fantasy, "Arial Black", Verdana, sans-serif;
     background-color: white;
-	color: black;
-	background: url("http://localhost/laCriee/Images/criee.png") no-repeat center center fixed;
-	background-size: cover;
+    color: black;
 
 }
-#espace-adresse{
 
-	padding-left: 76px;
-}
-mark
-{
-	font-weight: bold;
-}
-footer
-{
-	text-shadow: 2px 2px 4px white;
-	color: black;	
-    font-size: 25px; 
-	font-family: Comic Sans MS, fantasy, Arial, "Arial Black", Impact, Verdana, sans-serif; 
-	font-weight: bold;
-	text-align: center;
-	padding-top: 10px;
-	padding-bottom: 50px;
+.img-criee {
+    font-size: 17px;
+    font-family: Arial, Impact, fantasy, "Arial Black", Verdana, sans-serif;
+    background-color: white;
+    color: black;
+    background: url("http://localhost/laCriee/Images/criee.png") no-repeat center center fixed;
+    background-size: cover;
 
 }
-section
-{
-padding:50px;
+
+
+.lightgrey{
+    background-color: #ededed;
 }
 
+.darkGrey{
+    background-color: rgba(108, 108, 108, 0.39);
+}
+
+
+mark {
+    font-weight: bold;
+}
+
+footer {
+    text-shadow: 2px 2px 4px white;
+    color: black;
+    font-size: 25px;
+    font-family: Comic Sans MS, fantasy, Arial, "Arial Black", Impact, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 50px;
+
+}
+
+section {
+    padding: 50px;
+}
 
 .button {
-	font: bold 11px Arial;
-	text-decoration: none;
-	background-color: #E1E1E1;
-	color: black;
-	padding: 4px 6px 4px 6px;
-	border: solid 1px darkgrey;
-	float: right;
-	margin-right: 10px;
+    font: bold 11px Arial;
+    text-decoration: none;
+    background-color: #E1E1E1;
+    color: black;
+    padding: 4px 6px 4px 6px;
+    border: solid 1px darkgrey;
+    float: right;
+    margin-right: 10px;
 }
 
-table {
-	border-collapse: collapse;
-
+.table-profil {
+    border-collapse: collapse;
 }
-td{
-	text-align: left;
+
+td {
+    text-align: left;
 }
 
 td:first-child {
-	padding-right: 23px;
-	}
+    padding-right: 23px;
+}

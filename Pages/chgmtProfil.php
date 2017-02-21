@@ -1,53 +1,115 @@
 <?php
 
-session_start ();
-// $_SESSION['login']
-//$_SESSION['status']
+session_start();
 
-$raisonSociale=$_POST['raisSoc'];
-$rue=$_POST['rue'];
-$codePostal=$_POST['cp'];
-$ville=$_POST['ville'];
-$numHab=$_POST['numHab'];
-
-echo $raisonSociale.$rue.$codePostal.$ville.$numHab ;
-
-$bdd = new PDO('mysql:host=localhost;dbname=lacriee;charset=utf8','root','');
+$nom = '';
+$prenom = '';
+$raisonSociale = '';
 
 
-try
-{
-    if($bdd!=null) {
-        if($_SESSION['status']=='acheteur'){
+if ($_SESSION['status'] == 'acheteur') {
 
-           /* $requete="Select login, raisonSocEnt, adresse, ville, cp, numHabillitation from acheteur where login='".$_SESSION['login']."'";
+    $raisonSociale = addslashes($_POST['raisSoc']);
+}
+$rue = addslashes($_POST['rue']);
+$codePostal = addslashes($_POST['cp']);
+$ville = addslashes($_POST['ville']);
 
-            $resultat=$bdd->query($requete);
+if ($_SESSION['status'] == 'crieur') {
+    $nom = addslashes($_POST['nom']);
+    $prenom = addslashes($_POST['prenom']);
+}
 
-            while($donnees = $resultat->fetch())
-            {
-                $acheteurLogin = $donnees['login'];
-                $acheteurRS=$donnees['raisonSocEnt'];
-                $acheteurAdr=$donnees['adresse'];
-                $acheteurVille=$donnees['ville'];
-                $acheteurCp=$donnees['cp'];
-                $acheteurNumHab=$donnees['numHabillitation'];
-            }
-            */
 
-        }
-        elseif ($_SESSION['status']=='crieur') {
+echo $raisonSociale . $rue . $codePostal . $ville . $nom . $prenom;
 
-        }
-        else{
+
+$elementsToInsert = '';
+
+if ($raisonSociale != '' && $raisonSociale != null) {
+    $elementsToInsert = "SET raisonSocEnt ='" . $raisonSociale . "'";
+}
+if ($rue != '') {
+    if ($elementsToInsert != '') {
+        $elementsToInsert = $elementsToInsert . ",";
+    } else {
+        $elementsToInsert = $elementsToInsert . "SET ";
+    }
+    $elementsToInsert = $elementsToInsert . "adresse ='" . $rue . "'";
+
+}
+if ($codePostal != '') {
+    if ($elementsToInsert != '') {
+        $elementsToInsert = $elementsToInsert . ",";
+    } else {
+        $elementsToInsert = $elementsToInsert . "SET ";
+    }
+    $elementsToInsert = $elementsToInsert . "cp ='" . $codePostal . "'";
+
+}
+if ($ville != '') {
+    if ($elementsToInsert != '') {
+        $elementsToInsert = $elementsToInsert . ",";
+    } else {
+        $elementsToInsert = $elementsToInsert . "SET ";
+    }
+    $elementsToInsert = $elementsToInsert . "ville ='" . $ville . "'";
+
+}
+if ($nom != '') {
+    if ($elementsToInsert != '') {
+        $elementsToInsert = $elementsToInsert . ",";
+    } else {
+        $elementsToInsert = $elementsToInsert . "SET ";
+    }
+    $elementsToInsert = $elementsToInsert . "nom ='" . $nom . "'";
+
+}
+if ($prenom != '') {
+    if ($elementsToInsert != '') {
+        $elementsToInsert = $elementsToInsert . ",";
+    } else {
+        $elementsToInsert = $elementsToInsert . "SET ";
+    }
+    $elementsToInsert = $elementsToInsert . "prenom ='" . $prenom . "'";
+
+}
+
+
+$bdd = new PDO('mysql:host=localhost;dbname=lacriee;charset=utf8', 'root', '');
+
+
+try {
+    if ($bdd != null) {
+        if ($_SESSION['status'] == 'acheteur') {
+
+            $requete = "UPDATE acheteur " . $elementsToInsert . " where login='" . $_SESSION['login'] . "'";
+
+            $resultat = $bdd->prepare($requete);
+
+            $resultat->execute();
+
+            header('Location: monCompte.php');
+            exit();
+
+        } elseif ($_SESSION['status'] == 'crieur') {
+
+            $requete = "UPDATE crieur " . $elementsToInsert . " where login='" . $_SESSION['login'] . "'";
+
+            $resultat = $bdd->prepare($requete);
+
+            $resultat->execute();
+
+            header('Location: monCompte.php');
+            exit();
+
+        } else {
             header('Location: login.html?connection=0');
             exit();
         }
 
     }
-}
-catch(PDOException $e)
-{
-    die('Erreur: '.$e->getMessage());
+} catch (PDOException $e) {
+    die('Erreur: ' . $e->getMessage());
 }
 ?>

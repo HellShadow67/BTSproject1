@@ -1,14 +1,14 @@
 <script>
     function $_GET(param) {
         var vars = {};
-        window.location.href.replace( location.hash, '' ).replace(
+        window.location.href.replace(location.hash, '').replace(
             /[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
-            function( m, key, value ) { // callback
+            function (m, key, value) { // callback
                 vars[key] = value !== undefined ? value : '';
             }
         );
 
-        if ( param ) {
+        if (param) {
             return vars[param] ? vars[param] : null;
         }
         return vars;
@@ -17,10 +17,9 @@
     var $_GET = $_GET(),
         statusLog = $_GET['connection'];
 
-    if(statusLog==0)
-	{
-	    alert('Login et/ou mot de passe erroné!')
-	}
+    if (statusLog == 0) {
+        alert('Login et/ou mot de passe erroné!')
+    }
 
 
 </script>
@@ -28,42 +27,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8" />
-	<link rel="stylesheet" href="style.css" />
-	<!--[if lt IE 9]>
-		<script src="http://github.com/aFarkas/html5shiv/blob/master/dist/html5shiv.js"></script>
-	<![endif]--> 
-	<!--[if IE]>
-		<meta http-equiv="X-UA-Compatible" content="IE=10">
-	<![endif]-->
-	<!--[if IE]>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<![endif]-->
-	<title>Login</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="style.css"/>
+    <!--[if lt IE 9]>
+    <script src="http://github.com/aFarkas/html5shiv/blob/master/dist/html5shiv.js"></script>
+    <![endif]-->
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=10">
+    <![endif]-->
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <![endif]-->
+    <title>Login</title>
 </head>
 <body class="img-criee">
 
 <section>
-<h1>Page d'authentification</h1>
-<form method="post" action="login.php">
-<table>
-   <tr>
-       <td><label>Votre identifiant</label> : <input type="text" name="ident" required /></td>
-	   <td></td>
-       <td><label>Votre mot de passe</label> : <input type="password" name="motDePasse" required /></td>
-	   <td></td>
-       </tr>
-</table>
+    <h1>Page d'authentification</h1>
+    <form method="post" action="login.php">
+        <table>
+            <tr>
+                <td><label>Votre identifiant</label> : <input type="text" name="ident" required/></td>
+                <td></td>
+                <td><label>Votre mot de passe</label> : <input type="password" name="motDePasse" required/></td>
+                <td></td>
+            </tr>
+        </table>
 </section>
 <section>
-	   <input type="submit" value="Valider" />   
-	   <button><a href="accueil.html">Annuler</a></button>
+    <input type="submit" value="Valider"/>
+    <button><a href="accueil.html">Annuler</a></button>
 </section>
- </form>
+</form>
 
- </body>
-	<footer>
-		Criée Poulgoazec, 29780 Plouhinec - +33 (0)2 98 70 77 19
-	</footer>
+</body>
+<footer>
+    Criée Poulgoazec, 29780 Plouhinec - +33 (0)2 98 70 77 19
+</footer>
 
 </html>

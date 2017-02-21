@@ -101,11 +101,11 @@ CREATE TABLE Acheteur(
 #------------------------------------------------------------
 
 CREATE TABLE Crieur(
-  idCrieur       Varchar (25) NOT NULL ,
+  idCrieur         Varchar (25) NOT NULL ,
   login            Varchar (25) ,
   pwd              Varchar (25) ,
-  Nom     Varchar (25) ,
-  Prenom     Varchar (25) ,
+  nom              Varchar (25) ,
+  prenom           Varchar (25) ,
   adresse          Varchar (25) ,
   ville            Varchar (25) ,
   cp               Varchar (25) ,
@@ -130,8 +130,8 @@ CREATE TABLE Lot(
         prixEnchere       float ,
         dateEnchere       Date ,
         heureDebutEnchere Datetime ,
-        prixPlancher        float ,
-        PrixDepart      float ,
+        prixPlancher      float ,
+        PrixDepart        float ,
         codeEtat          Varchar (25) ,
         idAcheteur        Varchar (25) ,
         idFacture         Varchar (25) ,
