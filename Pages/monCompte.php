@@ -130,7 +130,7 @@ try {
                 $idAcheteur=$data['idAcheteur'];
             }
 
-            $requete2="Select l.datePeche,specification,libelleQual,tare, poidsBrutLot, dateEnchere, libellePres, nomComm, l.prixEnchere from lot l,espece,bac,qualite,taille, presentation where l.idEsp=espece.idEsp and l.idTaille=taille.idTaille and l.idPres=presentation.idpres and l.idQual=qualite.idQual and l.idBac=bac.idBac order by dateEnchere desc;";
+            $requete2="Select l.datePeche,specification,libelleQual,tare, poidsBrutLot, dateEnchere, libellePres, nomComm, l.prixEnchere from lot l,espece,bac,qualite,taille, presentation where l.idEsp=espece.idEsp and l.idTaille=taille.idTaille and l.idPres=presentation.idpres and l.idQual=qualite.idQual and l.idBac=bac.idBac and l.idAcheteur=".$idAcheteur." order by dateEnchere desc;";
             $resultat2 = $bdd->prepare($requete2);
 
             $resultat2->execute();
