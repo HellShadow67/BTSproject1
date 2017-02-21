@@ -78,7 +78,7 @@ try {
             echo '<div id="tabs">
     <ul>
         <li><a href="#tabs-1">Profil</a></li>
-        <li><a href="#tabs-2">Enchère(s) gangnée(s)</a></li>
+        <li><a href="#tabs-2">Enchère(s) précédente(s)</a></li>
         <li><a href="#tabs-3">Enchère(s) en cours/à venir</a></li>
     </ul>
     <div id="tabs-1">
@@ -118,9 +118,35 @@ try {
  
     </div>
     <div id="tabs-2">
-        <p>
         
-</p>
+        ';
+
+            $requete = "Select idAcheteur from acheteur where login='" . $_SESSION['login'] . "'";
+            $resultat = $bdd->prepare($requete);
+
+            $resultat->execute();
+
+            while($data = $resultat->fetch()) {
+                $idAcheteur=$data['idAcheteur'];
+            }
+
+            $requete2="Select l.datePeche,specification,libelleQual,tare, poidsBrutLot, dateEnchere, libellePres, nomComm, l.prixEnchere from lot l,espece,bac,qualite,taille, presentation where l.idEsp=espece.idEsp and l.idTaille=taille.idTaille and l.idPres=presentation.idpres and l.idQual=qualite.idQual and l.idBac=bac.idBac order by dateEnchere desc;";
+            $resultat2 = $bdd->prepare($requete2);
+
+            $resultat2->execute();
+
+            $tab = array();
+
+            $resultat2->setFetchMode(PDO::FETCH_ASSOC);
+            echo '<table id="table-list-enchere">
+            <tr class="table-header"><td>Date de l\'enchère</td><td>Espèce</td><td>Poids Brut</td><td>Specification</td><td>Prix</td><td>Presentation</td><td>Qualité</td><td>Date de pêche</td></tr>';
+
+            foreach($resultat2 as $row)
+            {
+                echo '<tr><td>'.$row['dateEnchere'].'</td><td>'.$row['nomComm'].'</td><td>'.$row['poidsBrutLot'].'</td><td>'.$row['specification'].'</td><td>'.$row['prixEnchere'].'</td><td>'.$row['libellePres'].'</td><td>'.$row['libelleQual'].'</td><td>'.$row['datePeche'].'</td></tr>';
+            }
+            echo '</table>
+
     </div>
     <div id="tabs-3">
         <p>

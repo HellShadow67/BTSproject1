@@ -54,15 +54,13 @@ body {
 
 }
 
-
-.lightgrey{
-    background-color: #ededed;
+.lightgrey {
+    background-color: #fbfbfb;
 }
 
-.darkGrey{
-    background-color: rgba(108, 108, 108, 0.39);
+.darkGrey {
+    background-color: #eeeeee;
 }
-
 
 mark {
     font-weight: bold;
@@ -95,6 +93,13 @@ section {
     margin-right: 10px;
 }
 
+.button:hover {
+    background-color: #c5f1ff;
+    border: solid rgba(0, 0, 255, 0.69) 1px;
+    cursor: pointer;
+
+}
+
 .table-profil {
     border-collapse: collapse;
 }
@@ -105,4 +110,29 @@ td {
 
 td:first-child {
     padding-right: 23px;
+}
+
+#table-list-enchere {
+    border-collapse: collapse;
+    margin-top: 50px;
+}
+
+#table-list-enchere tr {
+    border: 1px solid #ccc;
+    text-align: left;
+    font-size: 18px;
+}
+
+#table-list-enchere tr {
+    padding: 50px;
+}
+
+#table-list-enchere tr:nth-of-type(odd) {
+    background: #eee;
+}
+
+.table-header {
+    background: #3498db;
+    color: white;
+    font-weight: bold;
 }

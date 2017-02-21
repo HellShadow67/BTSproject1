@@ -134,7 +134,8 @@ Insert into Peche values('2008-07-18',1),
 Insert into Bac values('B',2.50),
   ('F',4);
 
-Insert into Crieur values('1','Crieur1','crieur123','Durand','Julien','13 rue Des Fleurs','Strasbourg','67000');
+Insert into Crieur values('1','Crieur1','crieur123','Durand','Julien','13 rue Des Fleurs','Strasbourg','67000'),
+('2','Crieur2','crieur456','Dupont','Jean','14 rue Des Lilas','Strasbourg','67100');
 
 Insert into Lot values('2008-07-18', 11, 1, 32130, 40, 'VID', 'E', 'B', 8.40, 7.50, '2008-07-18', '2008-07-18 10:15:00', 6.00, 6.00, 'T', 4, NULL,'1'),
   ('2008-07-18', 11, 2, 32130, 40, 'VID', 'E', 'B', 9.10, 8.90, '2008-07-18', '2008-07-18 10:18:20', 6.00, 6.00, 'T', 1, NULL,'1'),

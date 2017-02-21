@@ -871,7 +871,8 @@ button.ui-button::-moz-focus-inner {
 	border-width: 0;
 	padding: 1em 1.4em;
 	background: none;
-	height: 75%;
+	height: 100%;
+	width: auto;
 
 
 }

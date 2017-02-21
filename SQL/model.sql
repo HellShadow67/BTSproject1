@@ -17,7 +17,7 @@ use lacriee;
 
 CREATE TABLE Taille(
         idTaille      Int ,
-        Specification Varchar (25) NOT NULL ,
+        specification Varchar (25) NOT NULL ,
         PRIMARY KEY (idTaille )
 )ENGINE=InnoDB;
 
@@ -123,7 +123,7 @@ CREATE TABLE Lot(
         idLot             Varchar (25) NOT NULL ,
 	    	idEsp             Varchar (25) ,
 	    	idTaille          int,
-		    idPrep            Varchar (25) ,
+		    idPres            Varchar (25) ,
 	    	idQual            Varchar (25) ,
         idBac             Varchar (25) ,		
         poidsBrutLot      float ,
@@ -145,9 +145,9 @@ CREATE TABLE Lot(
 #------------------------------------------------------------
 
 CREATE TABLE Presentation(
-        idPrep      Varchar (25) NOT NULL ,
-        libellePrep Varchar (25) ,
-        PRIMARY KEY (idPrep )
+        idPres      Varchar (25) NOT NULL ,
+        libellePres Varchar (25) ,
+        PRIMARY KEY (idPres )
 )ENGINE=InnoDB;
 
 
@@ -168,12 +168,12 @@ CREATE TABLE Poster(
 
 ALTER TABLE Peche ADD CONSTRAINT FK_Peche_idBateau FOREIGN KEY (idBateau) REFERENCES Bateau(idBateau);
 ALTER TABLE Lot ADD CONSTRAINT FK_Lot_datePeche FOREIGN KEY (datePeche) REFERENCES Peche(datePeche);
-ALTER TABLE Lot ADD CONSTRAINT FK_Lot_idBateau FOREIGN KEY (idBateau) REFERENCES Bateau(idBateau);
+ALTER TABLE Lot ADD CONSTRAINT FK_Lot_idBateau FOREIGN KEY (idBateau) REFERENCES Peche(idBateau);
 ALTER TABLE Lot ADD CONSTRAINT FK_Lot_idTaille FOREIGN KEY (idTaille) REFERENCES Taille(idTaille);
 ALTER TABLE Lot ADD CONSTRAINT FK_Lot_idEsp FOREIGN KEY (idEsp) REFERENCES Espece(idEsp);
 ALTER TABLE Lot ADD CONSTRAINT FK_Lot_idBac FOREIGN KEY (idBac) REFERENCES Bac(idBac);
 ALTER TABLE Lot ADD CONSTRAINT FK_Lot_idQual FOREIGN KEY (idQual) REFERENCES Qualite(idQual);
-ALTER TABLE Lot ADD CONSTRAINT FK_Lot_idPrep FOREIGN KEY (idPrep) REFERENCES Presentation(idPrep);
+ALTER TABLE Lot ADD CONSTRAINT FK_Lot_idPres FOREIGN KEY (idPres) REFERENCES Presentation(idPres);
 ALTER TABLE Poster ADD CONSTRAINT FK_Poster_idLot FOREIGN KEY (idLot) REFERENCES Lot(idLot);
 ALTER TABLE Poster ADD CONSTRAINT FK_Poster_datePeche FOREIGN KEY (datePeche) REFERENCES Peche(datePeche);
 ALTER TABLE Poster ADD CONSTRAINT FK_Poster_idBateau FOREIGN KEY (idBateau) REFERENCES Bateau(idBateau);
