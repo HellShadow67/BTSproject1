@@ -138,6 +138,7 @@ try {
             $tab = array();
 
             $resultat2->setFetchMode(PDO::FETCH_ASSOC);
+
             echo '<table id="table-list-enchere">
             <tr class="table-header"><td>Date de l\'enchère</td><td>Espèce</td><td>Poids Brut</td><td>Specification</td><td>Prix</td><td>Presentation</td><td>Qualité</td><td>Date de pêche</td></tr>';
 
@@ -148,10 +149,37 @@ try {
             echo '</table>
 
     </div>
-    <div id="tabs-3">
-        <p>
-        
-</p>
+    <div id="tabs-3">';
+
+            $requete3="Select l.datePeche,specification,libelleQual,tare, poidsBrutLot, dateEnchere, libellePres, nomComm, l.prixEnchere from lot l,espece,bac,qualite,taille, presentation where l.idEsp=espece.idEsp and l.idTaille=taille.idTaille and l.idPres=presentation.idpres and l.idQual=qualite.idQual and l.idBac=bac.idBac and l.idAcheteur=".$idAcheteur." order by dateEnchere desc;";
+            $resultat3 = $bdd->prepare($requete3);
+
+            $resultat3->execute();
+
+            $tab = array();
+
+            $resultat3->setFetchMode(PDO::FETCH_ASSOC);
+
+            echo '<table id="table-list-enchere">
+            <tr class="table-header"><td> </td><td>Espèce</td><td>Date et heure de l\'enchère</td><td>Date de pêche</td></tr>';
+
+            foreach($resultat3 as $row)
+            {
+                echo $row[idLot].'?'.$row[datePeche].'?'.$row[idBateau];
+
+                echo '<tr><td> <input type="radio" name="enchereSelectionee" value="'.$row[idLot].'?'.$row[datePeche].'?'.$row[idBateau].'" checked></td><td>'.$row['nomComm'].'</td><td>'.$row['datePeche'].'</td><td>'.$row['dateEnchere'].'</td></tr>';
+            }
+            echo '</table>
+
+<form method="post" action="encherir.php">
+
+
+
+</form>
+
+
+
+
     </div>
 </div>';
 
@@ -175,8 +203,7 @@ try {
             echo '<div id="tabs">
     <ul>
         <li><a href="#tabs-1">Profil</a></li>
-        <li><a href="#tabs-2">Créer une nouvelle enchère</a></li>
-        <li><a href="#tabs-3">Enchère(s) en cours/à venir</a></li>
+        <li><a href="#tabs-2">Enchère(s) en cours/à venir</a></li>
     </ul>
      <div id="tabs-1">
      <p class="col-xs-5 .col-sm-6 .col-lg-4">
@@ -212,17 +239,10 @@ try {
          </form>
          </div>
      </p>
- 
-    </div>
-    <div id="tabs-2">
-        <p>
-        
-</p>
-    </div>
-    <div id="tabs-3">
-        <p>
-        
-</p>
+     </div>  
+      <div id="tabs-2">
+          
+
     </div>
 </div>';
 
