@@ -117,23 +117,30 @@ td:first-child {
     margin-top: 50px;
 }
 
-#table-list-enchere tr {
+.table-list-enchere tr {
     border: 1px solid #ccc;
     text-align: left;
     font-size: 18px;
 }
 
-#table-list-enchere td {
+.table-list-enchere td {
     padding-left: 50px;
     padding-bottom: 8px;
 }
 
-#table-list-enchere tr:nth-of-type(odd) {
+.table-list-enchere tr:nth-of-type(odd) {
     background: #eee;
 }
 
-#table-list-enchere tr:first-child {
+.table-list-enchere tr:first-child {
     background: rgba(0, 0, 255, 0.64);
     color: white;
+}
+
+.icones{
+    height: 25px;
+    width: auto;
+    padding-left: 70px;
+
 }
 

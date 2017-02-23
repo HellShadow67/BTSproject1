@@ -131,7 +131,7 @@ CREATE TABLE Lot(
         dateEnchere       Date ,
         heureDebutEnchere Datetime ,
         prixPlancher      float ,
-        PrixDepart        float ,
+        prixDepart        float ,
         codeEtat          Varchar (25) ,
         idAcheteur        Varchar (25) ,
         idFacture         Varchar (25) ,

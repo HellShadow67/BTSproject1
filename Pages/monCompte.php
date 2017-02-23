@@ -11,12 +11,16 @@
     <!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <![endif]-->
-    <title>Login</title>
+    <title>Mon compte</title>
     <link rel="stylesheet" href="../Libs/jquery-ui.css">
     <link rel="stylesheet" href="../Libs/bootstrap.min.css">
     <script src="../Libs/jquery-1.12.4.js"></script>
     <script src="../Libs/jquery-ui.js"></script>
     <script>
+        $(function () {
+            $(document).tooltip();
+        });
+
         $(function () {
             $("#tabs").tabs();
         });
@@ -53,6 +57,8 @@ session_start();
 //$_SESSION['status']
 
 $bdd = new PDO('mysql:host=localhost;dbname=lacriee;charset=utf8', 'root', '');
+
+$aPartirDe='2016-08-24';
 
 
 try {
@@ -117,20 +123,18 @@ try {
      </p>
  
     </div>
-    <div id="tabs-2">
-        
-        ';
+    <div id="tabs-2">';
 
             $requete = "Select idAcheteur from acheteur where login='" . $_SESSION['login'] . "'";
             $resultat = $bdd->prepare($requete);
 
             $resultat->execute();
 
-            while($data = $resultat->fetch()) {
-                $idAcheteur=$data['idAcheteur'];
+            while ($data = $resultat->fetch()) {
+                $idAcheteur = $data['idAcheteur'];
             }
 
-            $requete2="Select l.datePeche,specification,libelleQual,tare, poidsBrutLot, dateEnchere, libellePres, nomComm, l.prixEnchere from lot l,espece,bac,qualite,taille, presentation where l.idEsp=espece.idEsp and l.idTaille=taille.idTaille and l.idPres=presentation.idpres and l.idQual=qualite.idQual and l.idBac=bac.idBac and l.idAcheteur=".$idAcheteur." order by dateEnchere desc;";
+            $requete2 = "Select l.datePeche,specification,libelleQual,tare, poidsBrutLot, dateEnchere, libellePres, nomComm, l.prixEnchere from lot l,espece,bac,qualite,taille, presentation where l.idEsp=espece.idEsp and l.idTaille=taille.idTaille and l.idPres=presentation.idpres and l.idQual=qualite.idQual and l.idBac=bac.idBac and l.idAcheteur=" . $idAcheteur . " order by dateEnchere desc;";
             $resultat2 = $bdd->prepare($requete2);
 
             $resultat2->execute();
@@ -139,19 +143,20 @@ try {
 
             $resultat2->setFetchMode(PDO::FETCH_ASSOC);
 
-            echo '<table id="table-list-enchere">
+            echo '<table class="table-list-enchere">
             <tr class="table-header"><td>Date de l\'enchère</td><td>Espèce</td><td>Poids Brut</td><td>Specification</td><td>Prix</td><td>Presentation</td><td>Qualité</td><td>Date de pêche</td></tr>';
 
-            foreach($resultat2 as $row)
-            {
-                echo '<tr><td>'.$row['dateEnchere'].'</td><td>'.$row['nomComm'].'</td><td>'.$row['poidsBrutLot'].'</td><td>'.$row['specification'].'</td><td>'.$row['prixEnchere'].'</td><td>'.$row['libellePres'].'</td><td>'.$row['libelleQual'].'</td><td>'.$row['datePeche'].'</td></tr>';
+            foreach ($resultat2 as $row) {
+                echo '<tr><td>' . $row['dateEnchere'] . '</td><td>' . $row['nomComm'] . '</td><td>' . $row['poidsBrutLot'] . '</td><td>' . $row['specification'] . '</td><td>' . $row['prixEnchere'] . '</td><td>' . $row['libellePres'] . '</td><td>' . $row['libelleQual'] . '</td><td>' . $row['datePeche'] . '</td></tr>';
             }
             echo '</table>
 
     </div>
     <div id="tabs-3">';
 
-            $requete3="Select l.datePeche,specification,libelleQual,tare, poidsBrutLot, dateEnchere, libellePres, nomComm, l.prixEnchere from lot l,espece,bac,qualite,taille, presentation where l.idEsp=espece.idEsp and l.idTaille=taille.idTaille and l.idPres=presentation.idpres and l.idQual=qualite.idQual and l.idBac=bac.idBac and l.idAcheteur=".$idAcheteur." order by dateEnchere desc;";
+            $requete3 = "Select prixPlancher, prixDepart, l.datePeche,specification, libelleQual,tare, l.idBateau, poidsBrutLot, dateEnchere, libellePres, nomComm, idLot,nomBateau, idAcheteur from lot l,espece,bac,qualite,taille, presentation, peche, bateau where l.idEsp=espece.idEsp and l.datePeche=peche.datePeche and l.idBateau=peche.idBateau and peche.idBateau=bateau.idBateau and l.idTaille=taille.idTaille and l.idPres=presentation.idpres and l.idQual=qualite.idQual and l.idBac=bac.idBac and l.datePeche >='". $aPartirDe ."' and idAcheteur IS NULL order by dateEnchere desc";
+
+
             $resultat3 = $bdd->prepare($requete3);
 
             $resultat3->execute();
@@ -160,25 +165,36 @@ try {
 
             $resultat3->setFetchMode(PDO::FETCH_ASSOC);
 
-            echo '<table id="table-list-enchere">
-            <tr class="table-header"><td> </td><td>Espèce</td><td>Date et heure de l\'enchère</td><td>Date de pêche</td></tr>';
+            echo '<table class="table-list-enchere">
+            <tr class="table-header"><td> </td><td>Espèce</td><td>Date et heure de l\'enchère</td><td>Date de pêche</td><td>Informations supplémentaires</td></tr>';
 
-            foreach($resultat3 as $row)
-            {
-                echo $row[idLot].'?'.$row[datePeche].'?'.$row[idBateau];
 
-                echo '<tr><td> <input type="radio" name="enchereSelectionee" value="'.$row[idLot].'?'.$row[datePeche].'?'.$row[idBateau].'" checked></td><td>'.$row['nomComm'].'</td><td>'.$row['datePeche'].'</td><td>'.$row['dateEnchere'].'</td></tr>';
+            echo '<form method="post" action="encherir.php">';
+
+            foreach ($resultat3 as $row) {
+                // $infoSup='Prix de départ: '.$row['prixDepart'].'€ Prix Plancher: '.$row['prixPlancher'].'€ '.$row['specification'].' Qualité:'.$row['libelleQual'].' Tare: '.$row['tare'].' Poids brut: '.$row['poidsBrutLot'].' Presentations: '.$row['libellePres'];
+
+                $prixDep = 'Prix de départ: '.$row['prixDepart'].'€';
+                $prixPlancher = 'Prix Plancher: '.$row['prixPlancher'].'€';
+                $taille = $row['specification'];
+                $qualite = 'Qualité: '.$row['libelleQual'];
+                $tare = 'Tare: '.$row['tare'];
+                $poidsBrut = 'Poids brut: '.$row['poidsBrutLot'];
+                $presentation = 'Présentation: '.$row['libellePres'];
+
+                $infoSup=$prixDep.' '.$prixPlancher.' '.$taille.' '.$qualite.' '.$presentation.' '.$tare.' '.$poidsBrut;
+
+
+
+                echo '<tr><td> <input type="radio" name="enchereSelectionnee" value="' . $row['idLot'] . '?' . $row['datePeche'] . '?' . $row['idBateau'] . '" checked></td><td>' . $row['nomComm'] . '</td><td>' . $row['datePeche'] . '</td><td>' . $row['dateEnchere'] .'</td><td><p><label for="details">Detail:</label><img src="../Images/Information_icon.png" class="icones" id="details" title="'.$infoSup.'"></p></td></tr>';
             }
             echo '</table>
 
-<form method="post" action="encherir.php">
 
 
+ <input type="submit" value="Valider" />  
 
 </form>
-
-
-
 
     </div>
 </div>';
@@ -240,8 +256,59 @@ try {
          </div>
      </p>
      </div>  
-      <div id="tabs-2">
-          
+      <div id="tabs-2">';
+
+            $requete = "Select idCrieur from crieur where login='" . $_SESSION['login'] . "'";
+            $resultat = $bdd->prepare($requete);
+
+            $resultat->execute();
+
+            while ($data = $resultat->fetch()) {
+                $idCrieur = $data['idCrieur'];
+            }
+      
+
+
+            $requete3 = "Select prixPlancher, prixDepart, l.datePeche,specification, libelleQual,tare, l.idBateau, poidsBrutLot, dateEnchere, libellePres, nomComm, idLot,nomBateau, idAcheteur from lot l,espece,bac,qualite,taille, presentation, peche, bateau where l.idEsp=espece.idEsp and l.datePeche=peche.datePeche and l.idBateau=peche.idBateau and peche.idBateau=bateau.idBateau and l.idTaille=taille.idTaille and l.idPres=presentation.idpres and l.idQual=qualite.idQual and l.idBac=bac.idBac and l.datePeche >='". $aPartirDe ."' and idAcheteur IS NULL and idCrieur=". $idCrieur ." order by dateEnchere desc";
+
+
+            $resultat3 = $bdd->prepare($requete3);
+
+            $resultat3->execute();
+
+            $tab = array();
+
+            $resultat3->setFetchMode(PDO::FETCH_ASSOC);
+
+            echo '<table class="table-list-enchere">
+            <tr class="table-header"><td> </td><td>Espèce</td><td>Date et heure de l\'enchère</td><td>Date de pêche</td><td>Informations supplémentaires</td></tr>';
+
+
+            echo '<form method="post" action="encherir.php">';
+
+            foreach ($resultat3 as $row) {
+
+                $prixDep = 'Prix de départ: '.$row['prixDepart'].'€';
+                $prixPlancher = 'Prix Plancher: '.$row['prixPlancher'].'€';
+                $taille = $row['specification'];
+                $qualite = 'Qualité: '.$row['libelleQual'];
+                $tare = 'Tare: '.$row['tare'];
+                $poidsBrut = 'Poids brut: '.$row['poidsBrutLot'];
+                $presentation = 'Présentation: '.$row['libellePres'];
+
+                $infoSup=$prixDep.' '.$prixPlancher.' '.$taille.' '.$qualite.' '.$presentation.' '.$tare.' '.$poidsBrut;
+
+
+
+                echo '<tr><td> <input type="radio" name="enchereSelectionnee" value="' . $row['idLot'] . '?' . $row['datePeche'] . '?' . $row['idBateau'] . '" checked></td><td>' . $row['nomComm'] . '</td><td>' . $row['datePeche'] . '</td><td>' . $row['dateEnchere'] .'</td><td><p><label for="details">Detail:</label><img src="../Images/Information_icon.png" class="icones" id="details" title="'.$infoSup.'"></p></td></tr>';
+            }
+            echo '</table>
+
+
+
+ <input type="submit" value="Valider" />  
+
+</form>
 
     </div>
 </div>';
