@@ -52,7 +52,8 @@ CREATE TABLE Espece(
         idEsp     Varchar (25) NOT NULL ,
         nomComm   Varchar (25) ,
         nomScient Varchar (25) ,
-		codeEsp Varchar (25) ,
+	    	codeEsp Varchar (25) ,
+	    	nomImg Varchar (25) ,
         PRIMARY KEY (idEsp )
 )ENGINE=InnoDB;
 
@@ -64,7 +65,7 @@ CREATE TABLE Espece(
 CREATE TABLE Bateau(
         idBateau              Varchar (25) NOT NULL ,
         nomBateau             Varchar (25) ,
-        ImmatriculationBateau Varchar (25) ,
+        immatriculationBateau Varchar (25) ,
         PRIMARY KEY (idBateau )
 )ENGINE=InnoDB;
 

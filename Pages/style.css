@@ -143,4 +143,14 @@ td:first-child {
     padding-left: 70px;
 
 }
-
+.encherePanel{
+    background-color: white;
+    border-bottom: solid blue 1px;
+    border-top: solid blue 1px;
+    display: flex;
+    flex-direction: column;
+}
+.img-poisson{
+    width: 400px;
+    height: auto;
+}
