@@ -18,7 +18,7 @@
         statusLog = $_GET['connection'];
 
     if (statusLog == 0) {
-        alert('Login et/ou mot de passe erroné!')
+        alert('L\'authentification a échouée!')
     }
 
 
@@ -43,6 +43,10 @@
 <body class="img-criee">
 
 <section>
+
+    <a class="button" href="accueil.html">Annuler</a>
+
+
     <h1>Page d'authentification</h1>
     <form method="post" action="login.php">
         <table>
@@ -56,10 +60,8 @@
 </section>
 <section>
     <input type="submit" value="Valider"/>
-    <button><a href="accueil.html">Annuler</a></button>
 </section>
 </form>
-
 </body>
 <footer>
     Criée Poulgoazec, 29780 Plouhinec - +33 (0)2 98 70 77 19

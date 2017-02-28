@@ -84,7 +84,7 @@ try {
             echo '<div id="tabs">
     <ul>
         <li><a href="#tabs-1">Profil</a></li>
-        <li><a href="#tabs-2">Enchère(s) précédente(s)</a></li>
+        <li><a href="#tabs-2">Achat(s) effectué(s)</a></li>
         <li><a href="#tabs-3">Enchère(s) du jour</a></li>
     </ul>
     <div id="tabs-1">
@@ -178,8 +178,8 @@ try {
                 $prixPlancher = 'Prix Plancher: '.$donnees['prixPlancher'].'€';
                 $taille = $donnees['specification'];
                 $qualite = 'Qualité: '.$donnees['libelleQual'];
-                $tare = 'Tare: '.$donnees['tare'];
-                $poidsBrut = 'Poids brut: '.$donnees['poidsBrutLot'];
+                $tare = 'Tare: '.$donnees['tare'].'kg';
+                $poidsBrut = 'Poids brut: '.$donnees['poidsBrutLot'].'kg';
                 $presentation = 'Présentation: '.$donnees['libellePres'];
 
                 $infoSup=$prixDep.' '.$prixPlancher.' '.$taille.' '.$qualite.' '.$presentation.' '.$tare.' '.$poidsBrut;

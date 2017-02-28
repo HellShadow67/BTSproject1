@@ -21,6 +21,7 @@
 
 <a class="button" href="logout.php">Déconnection</a>
 
+
 <h1>Enchère</h1>
 <?php
 session_start();
@@ -49,33 +50,67 @@ try {
 
         $donnees = $resultat->fetch();
 
-        echo '<div class="encherePanel">Nom Commun: ' . $donnees['nomComm'] . 'Nom scientifique: ' . $donnees['nomScient'].'Code espèce: '.$donnees['codeEsp'].'<img class="img-poisson" src="../Images/Poissons/'.$donnees['nomImg'].'.jpg"';
+        echo '<div class="encherePanel">
+<div class="row">
+<div class="col-lg-9 col-sm-9 col-md-9">
+    <table id="table-description-enchere">
+        <tr><td><b>Nom Commun: </b>' . $donnees['nomComm'] . '</td><td><b>Nom scientifique:</b> ' . $donnees['nomScient'] . '</td><td><b>Code espèce: </b>' . $donnees['codeEsp'] . '</td></tr>
+        <tr><td><b>Nom du bateau:</b> ' . $donnees['nomBateau'] . '</td><td><b>Immatriculation du bateau:</b> ' . $donnees['immatriculationBateau'] . '</td><td></td></tr>
+        <tr><td><b>Spécification: </b>' . $donnees['specification'] . '</td><td><b>Qualité:</b> ' . $donnees['libelleQual'] . '</td><td></td></tr>
+
+';
+        $poidsNet = $donnees['poidsBrutLot'] - $donnees['tare'];
+
+        echo '
+        <tr><td><b>Poids Brut: </b>' . $donnees['poidsBrutLot'] . 'kg</td><td><b>Tare:</b> ' . $donnees['tare'] . 'kg</td><td><b>Poids net: </b>' . $poidsNet . 'kg</td></tr>
+        <tr><td><b>Prix de départ: </b>' . $donnees['prixDepart'] . '€</td><td><b>Prix plancher:</b> ' . $donnees['prixPlancher'] . '€</td><td></td></tr>
+    </table>
+</div>
+<div class="col-lg-3 col-sm-3 col-md-3"><img class="img-poisson" src="../Images/Poissons/' . $donnees['nomImg'] . '.jpg"></div>
+</div>
+</div>';
 
 
         if ($_SESSION['status'] == 'acheteur') {
 
-            //if date heure<now() commence dans: decompte
-            //sinon deb
+
+            echo '<div>
+<div class="row">
+    <div class="col-md-3 col-sm-3 col-lg-3">
+
+    </div>
+    <div class="col-md-3 col-sm-3 col-lg-3">
+
+    </div>
+    <div class="col-md-3 col-sm-3 col-lg-3">
+
+    </div>
+
+</div>
+</div>';
 
 
         } elseif ($_SESSION['status'] == 'crieur') {
-        } else {
+
+
+
+        }
+        else {
             header('Location: login.html?connection=0');
             exit();
         }
 
     }
-}
-catch
-(PDOException $e)
-{
+} catch
+(PDOException $e) {
     die('Erreur: ' . $e->getMessage());
 }
 
 echo '</div>';
 ?>
-
+<a class="button" href="monCompte.php">Annuler</a>
 </body>
+
 <footer>
     Criée Poulgoazec, 29780 Plouhinec - +33 (0)2 98 70 77 19
 </footer>
