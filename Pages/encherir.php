@@ -187,12 +187,13 @@ echo '
         montantActu=parseInt(montantActu);
 var rand =Math.floor((Math.random() * 1) + 7);
 alert(rand);
-       montantActu=montantActu+rand;
+var divMontantActu = document.getElementById(\'montantActu\').val();
+       divMontantActu=montantActu+rand;
         alert(montantActu);
         
         
-        //    $(\'#expireDiv\').slideUp();
-        //    window.location.reload();
+          divMontantActu.slideUp();
+            window.location.reload();
     }
     
     var tpsEntreEnchere=Math.floor((Math.random() * 15000) + 45000);
