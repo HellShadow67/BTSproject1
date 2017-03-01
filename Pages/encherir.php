@@ -48,12 +48,7 @@
 
 
 
-        function randomNumber(a,b) {
-             Math.floor((Math.random() * a) + b);
-        }
 
-        //    $('#expireDiv').slideUp();
-        //    window.location.reload();
 
     </script>
 </head>
@@ -123,7 +118,7 @@ try {
 <div class="row">
     <div class="col-md-6 col-sm-6 col-lg-6" style="border-right: solid 1px #ccc">
         <label>Montant actuel:</label>
-        <input id="montantActuel" type="text" value="'.$prixDepart.'" readonly/>€
+        <input id="montantActuel" type="text" value="' . $prixDepart . '" readonly/>€
         <a class="button-enchere" style="margin-left: 86%;" >Stop</a>
     </div>
     <div class="col-md-6 col-sm-6 col-lg-6">
@@ -176,7 +171,7 @@ try {
     die('Erreur: ' . $e->getMessage());
 }
 
-echo'
+echo '
 <a class="button" href="monCompte.php">Annuler</a>
 </body>
 <footer>
@@ -188,15 +183,21 @@ echo'
     function enchereFictive() {
 
 
-        alert(document.getElementById(\'#montantActuel\'));  // null????
-        var montantActu = document.getElementById(\'#montantActuel\').val();
+        var montantActu = ' . $prixDepart . ';
         montantActu=parseInt(montantActu);
-        montantActu.innerHTML=montantActu+randomNumber(1,7);
-
+var rand =Math.floor((Math.random() * 1) + 7);
+alert(rand);
+       montantActu=montantActu+rand;
+        alert(montantActu);
+        
+        
+        //    $(\'#expireDiv\').slideUp();
+        //    window.location.reload();
     }
+    
     var tpsEntreEnchere=Math.floor((Math.random() * 15000) + 45000);
 
-    ajoutEnchere=setInterval(enchereFictive, tpsEntreEnchere );
+    ajoutEnchere=setInterval(enchereFictive, 2000 );
 </script>
 </html>';
 ?>
