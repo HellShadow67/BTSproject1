@@ -14,8 +14,48 @@
     <title>Enchère</title>
     <link rel="stylesheet" href="../Libs/jquery-ui.css">
     <link rel="stylesheet" href="../Libs/bootstrap.min.css">
-    <script src="../Libs/jquery-1.12.4.js"></script>
+    <script src="../Libs/jquery-3.1.1.js"></script>
+    <script src="../Libs/jquery.countdown.js"></script>
     <script src="../Libs/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../Libs/jquery.countdown.css">
+    <script type="text/javascript">
+
+        var seconds = 60;
+        var timer;
+        var minutes = 4;
+
+        function countdown() {
+            var container = document.getElementById('tpsRest');
+            seconds--;
+            if (seconds == 0 && minutes >= 0) {
+                minutes--;
+                seconds = 60;
+                container.innerHTML = 'Il reste <b>' + minutes + '</b> minutes et <b>0</b> secondes avant la fin de la vente.';
+            }
+            else if (seconds > 0 && minutes >= 0) {
+                container.innerHTML = 'Il reste <b>' + minutes + '</b> minutes et <b>' + seconds + '</b> secondes avant la fin de la vente.';
+            }
+            else {
+
+                container.innerHTML = 'L\'enchère est terminée!';
+                clearInterval(timer);
+            }
+
+        }
+
+
+        timer = setInterval(countdown, 1000);
+
+
+
+        function randomNumber(a,b) {
+             Math.floor((Math.random() * a) + b);
+        }
+
+        //    $('#expireDiv').slideUp();
+        //    window.location.reload();
+
+    </script>
 </head>
 <body class="img-criee">
 
@@ -61,6 +101,8 @@ try {
 
 ';
         $poidsNet = $donnees['poidsBrutLot'] - $donnees['tare'];
+        $prixDepart = $donnees['prixDepart'];
+        $prixPlacher = $donnees['prixPlancher'];
 
         echo '
         <tr><td><b>Poids Brut: </b>' . $donnees['poidsBrutLot'] . 'kg</td><td><b>Tare:</b> ' . $donnees['tare'] . 'kg</td><td><b>Poids net: </b>' . $poidsNet . 'kg</td></tr>
@@ -80,8 +122,8 @@ try {
 <div class="container-enchere2">
 <div class="row">
     <div class="col-md-6 col-sm-6 col-lg-6" style="border-right: solid 1px #ccc">
-        <label>Montant actuel:</label></br>
-        <p id="montantActuel"></p>
+        <label>Montant actuel:</label>
+        <input id="montantActuel" type="text" value="'.$prixDepart.'" readonly/>€
         <a class="button-enchere" style="margin-left: 86%;" >Stop</a>
     </div>
     <div class="col-md-6 col-sm-6 col-lg-6">
@@ -93,10 +135,11 @@ try {
      </form>
     </div>
 </div>
-<div class="row" style="border-top: solid 1px #ccc; padding-top: 15px;">
+<div id="expireDiv" class="row" style="border-top: solid 1px #ccc; padding-top: 15px;">
         <label>Temps Restant:</label></br>
         <p id="tpsRest"></p>
 </div>
+
 </div>
 </div>
 </div>';
@@ -104,25 +147,56 @@ try {
 
         } elseif ($_SESSION['status'] == 'crieur') {
 
+            echo '
+ <div class="container-enchere2">
+    <div class="row">
+        <div class="col-md-6 col-sm-6 col-lg-6" style="border-right: solid 1px #ccc">
 
+        <label>Montant actuel:</label></br>
+        <p id="montantActuel"></p>
+         </div>
+    <div id="expireDiv" class="col-md-6 col-sm-6 col-lg-6">
 
-        }
-        else {
+        <label>Temps Restant:</label></br>
+        <p id="tpsRest"></p>
+        </div>
+</div>
+</div>
+</div>';
+
+        } else {
             header('Location: login.html?connection=0');
             exit();
         }
 
     }
+
 } catch
 (PDOException $e) {
     die('Erreur: ' . $e->getMessage());
 }
 
-?>
+echo'
 <a class="button" href="monCompte.php">Annuler</a>
 </body>
-
 <footer>
     Criée Poulgoazec, 29780 Plouhinec - +33 (0)2 98 70 77 19
 </footer>
-</html>
+<script>
+    var ajoutEnchere;
+
+    function enchereFictive() {
+
+
+        alert(document.getElementById(\'#montantActuel\'));  // null????
+        var montantActu = document.getElementById(\'#montantActuel\').val();
+        montantActu=parseInt(montantActu);
+        montantActu.innerHTML=montantActu+randomNumber(1,7);
+
+    }
+    var tpsEntreEnchere=Math.floor((Math.random() * 15000) + 45000);
+
+    ajoutEnchere=setInterval(enchereFictive, tpsEntreEnchere );
+</script>
+</html>';
+?>

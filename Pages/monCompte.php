@@ -14,7 +14,7 @@
     <title>Mon compte</title>
     <link rel="stylesheet" href="../Libs/jquery-ui.css">
     <link rel="stylesheet" href="../Libs/bootstrap.min.css">
-    <script src="../Libs/jquery-1.12.4.js"></script>
+    <script src="../Libs/jquery-3.1.1.js"></script>
     <script src="../Libs/jquery-ui.js"></script>
     <script>
         $(function () {

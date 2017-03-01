@@ -90,6 +90,7 @@ section {
     padding: 4px 6px 4px 6px;
     border: solid 1px darkgrey;
     float: right;
+    display: flex;
     margin: 10px;
 }
 
@@ -205,6 +206,7 @@ b{
     color: black;
     padding: 4px 6px 4px 6px;
     border: solid 1px darkgrey;
+    display: flex;
 
 }
 
