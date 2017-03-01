@@ -51,6 +51,7 @@ try {
         $donnees = $resultat->fetch();
 
         echo '<div class="encherePanel">
+<div class="container-enchere">
 <div class="row">
 <div class="col-lg-9 col-sm-9 col-md-9">
     <table id="table-description-enchere">
@@ -68,24 +69,35 @@ try {
 </div>
 <div class="col-lg-3 col-sm-3 col-md-3"><img class="img-poisson" src="../Images/Poissons/' . $donnees['nomImg'] . '.jpg"></div>
 </div>
-</div>';
+</div>
+';
 
 
         if ($_SESSION['status'] == 'acheteur') {
 
 
             echo '<div>
+<div class="container-enchere2">
 <div class="row">
-    <div class="col-md-3 col-sm-3 col-lg-3">
-
+    <div class="col-md-6 col-sm-6 col-lg-6" style="border-right: solid 1px #ccc">
+        <label>Montant actuel:</label></br>
+        <p id="montantActuel"></p>
+        <a class="button-enchere" style="margin-left: 86%;" >Stop</a>
     </div>
-    <div class="col-md-3 col-sm-3 col-lg-3">
-
+    <div class="col-md-6 col-sm-6 col-lg-6">
+    <form>
+        <label>Enchère:</label></br>
+        <input type="number" min="1" name="montantActu" required/>   
+            </br>
+        <input type="submit" value="Enchérir" style="margin-left: 85%;"/>
+     </form>
     </div>
-    <div class="col-md-3 col-sm-3 col-lg-3">
-
-    </div>
-
+</div>
+<div class="row" style="border-top: solid 1px #ccc; padding-top: 15px;">
+        <label>Temps Restant:</label></br>
+        <p id="tpsRest"></p>
+</div>
+</div>
 </div>
 </div>';
 
@@ -106,7 +118,6 @@ try {
     die('Erreur: ' . $e->getMessage());
 }
 
-echo '</div>';
 ?>
 <a class="button" href="monCompte.php">Annuler</a>
 </body>

@@ -83,14 +83,14 @@ section {
 }
 
 .button {
-    font: bold 11px Arial;
+    font: 13px Arial;
     text-decoration: none;
     background-color: #E1E1E1;
     color: black;
     padding: 4px 6px 4px 6px;
     border: solid 1px darkgrey;
     float: right;
-    margin-right: 10px;
+    margin: 10px;
 }
 
 .button:hover {
@@ -150,7 +150,6 @@ td:first-child {
     border-top: solid blue 1px;
     display: flex;
     flex-direction: column;
-    border-bottom: solid #ccc 1px;
 }
 
 .img-poisson {
@@ -172,7 +171,7 @@ td:first-child {
     margin-top: 50px;
     color: rgba(33, 33, 33, 0.92);
     margin-left: 40px;
-    margin-top: 100px;
+    margin-top: 27px;
 
 
 }
@@ -188,4 +187,30 @@ td:first-child {
 
 b{
     color: black;
+}
+.container-enchere{
+    border-bottom: solid #ccc 1px;
+    padding-bottom: 20px;
+
+}
+.container-enchere2{
+    padding: 20px;
+    font-size: 20px;
+
+}
+.button-enchere {
+    font:  20px Arial;
+    text-decoration: none;
+    background-color: #E1E1E1;
+    color: black;
+    padding: 4px 6px 4px 6px;
+    border: solid 1px darkgrey;
+
+}
+
+.button-enchere:hover {
+    background-color: #c5f1ff;
+    border: solid rgba(0, 0, 255, 0.69) 1px;
+    cursor: pointer;
+
 }
