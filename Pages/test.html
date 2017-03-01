@@ -13,11 +13,11 @@
     <![endif]-->
     <title>Enchère</title>
     <link rel="stylesheet" href="../Libs/jquery-ui.css">
-
+    <link rel="stylesheet" href="../Libs/bootstrap.min.css">
     <script src="../Libs/jquery-3.1.1.js"></script>
     <script src="../Libs/jquery.countdown.js"></script>
-
-
+    <script src="../Libs/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../Libs/jquery.countdown.css">
     <script type="text/javascript">
 
         var seconds = 60;
@@ -25,15 +25,15 @@
         var minutes = 4;
 
         function countdown() {
-            var container = document.getElementById('minuteur');
+            var container = document.getElementById('tpsRest');
             seconds--;
-            if (seconds == 0&& minutes >= 0) {
+            if (seconds == 0 && minutes >= 0) {
                 minutes--;
                 seconds = 60;
-                container.innerHTML = 'Il reste <b>' + minutes + '</b> minutes et <b>0</b> seconds.';
+                container.innerHTML = 'Il reste <b>' + minutes + '</b> minutes et <b>0</b> secondes avant la fin de la vente.';
             }
             else if (seconds > 0 && minutes >= 0) {
-                container.innerHTML = 'Il reste <b>' + minutes + '</b> minutes et <b>' + seconds + '</b> seconds.';
+                container.innerHTML = 'Il reste <b>' + minutes + '</b> minutes et <b>' + seconds + '</b> secondes avant la fin de la vente.';
             }
             else {
 
@@ -47,16 +47,158 @@
         timer = setInterval(countdown, 1000);
 
 
+
+
+
     </script>
-
 </head>
-<body>
+<body class="img-criee">
+
+<a class="button" href="logout.php">Déconnection</a>
 
 
-<div id="minuteur"></div>
+<h1>Enchère</h1>
+<?php
+session_start();
 
+
+$enchereSelectionnée = $_POST['enchereSelectionnee'];
+
+
+$separation = explode("?", $enchereSelectionnée);
+$idLot = $separation[0];
+$datePeche = $separation[1];
+$idBateau = $separation[2];
+
+$bdd = new PDO('mysql:host=localhost;dbname=lacriee;charset=utf8', 'root', '');
+
+
+try {
+    if ($bdd != null) {
+
+        $requete = "Select prixPlancher,nomImg, prixDepart,specification,immatriculationBateau,nomScient, codeEsp, libelleQual,tare, poidsBrutLot, libellePres, nomComm,nomBateau from lot l,espece,bac,qualite,taille, presentation, peche, bateau where l.idEsp=espece.idEsp and l.datePeche=peche.datePeche and l.idBateau=peche.idBateau and peche.idBateau=bateau.idBateau and l.idTaille=taille.idTaille and l.idPres=presentation.idpres and l.idQual=qualite.idQual and l.idBac=bac.idBac and l.datePeche='" . $datePeche . "' and l.idBateau=" . $idBateau . " and l.idLot=" . $idLot;
+
+
+        $resultat = $bdd->prepare($requete);
+$resultat->execute();
+
+
+$donnees = $resultat->fetch();
+
+echo '<div class="encherePanel">
+    <div class="container-enchere">
+        <div class="row">
+            <div class="col-lg-9 col-sm-9 col-md-9">
+                <table id="table-description-enchere">
+                    <tr><td><b>Nom Commun: </b>' . $donnees['nomComm'] . '</td><td><b>Nom scientifique:</b> ' . $donnees['nomScient'] . '</td><td><b>Code espèce: </b>' . $donnees['codeEsp'] . '</td></tr>
+                    <tr><td><b>Nom du bateau:</b> ' . $donnees['nomBateau'] . '</td><td><b>Immatriculation du bateau:</b> ' . $donnees['immatriculationBateau'] . '</td><td></td></tr>
+                    <tr><td><b>Spécification: </b>' . $donnees['specification'] . '</td><td><b>Qualité:</b> ' . $donnees['libelleQual'] . '</td><td></td></tr>
+
+                    ';
+                    $poidsNet = $donnees['poidsBrutLot'] - $donnees['tare'];
+                    $prixDepart = $donnees['prixDepart'];
+                    $prixPlacher = $donnees['prixPlancher'];
+
+                    echo '
+                    <tr><td><b>Poids Brut: </b>' . $donnees['poidsBrutLot'] . 'kg</td><td><b>Tare:</b> ' . $donnees['tare'] . 'kg</td><td><b>Poids net: </b>' . $poidsNet . 'kg</td></tr>
+                    <tr><td><b>Prix de départ: </b>' . $donnees['prixDepart'] . '€</td><td><b>Prix plancher:</b> ' . $donnees['prixPlancher'] . '€</td><td></td></tr>
+                </table>
+            </div>
+            <div class="col-lg-3 col-sm-3 col-md-3"><img class="img-poisson" src="../Images/Poissons/' . $donnees['nomImg'] . '.jpg"></div>
+        </div>
+    </div>
+    ';
+
+
+    if ($_SESSION['status'] == 'acheteur') {
+
+
+    echo '<div>
+    <div class="container-enchere2">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-lg-6" style="border-right: solid 1px #ccc">
+                <label>Montant actuel:</label>
+                <input id="montantActuel" type="text" value="' . $prixDepart . '" readonly/>€
+                <a class="button-enchere" style="margin-left: 86%;" >Stop</a>
+            </div>
+            <div class="col-md-6 col-sm-6 col-lg-6">
+                <form>
+                    <label>Enchère:</label></br>
+                    <input type="number" min="1" name="montantActu" required/>
+                    </br>
+                    <input type="submit" value="Enchérir" style="margin-left: 85%;"/>
+                </form>
+            </div>
+        </div>
+        <div id="expireDiv" class="row" style="border-top: solid 1px #ccc; padding-top: 15px;">
+            <label>Temps Restant:</label></br>
+            <p id="tpsRest"></p>
+        </div>
+
+    </div>
+</div>
+</div>';
+
+
+} elseif ($_SESSION['status'] == 'crieur') {
+
+echo '
+<div class="container-enchere2">
+    <div class="row">
+        <div class="col-md-6 col-sm-6 col-lg-6" style="border-right: solid 1px #ccc">
+
+            <label>Montant actuel:</label></br>
+            <p id="montantActuel"></p>
+        </div>
+        <div id="expireDiv" class="col-md-6 col-sm-6 col-lg-6">
+
+            <label>Temps Restant:</label></br>
+            <p id="tpsRest"></p>
+        </div>
+    </div>
+</div>
+</div>';
+
+} else {
+header('Location: login.html?connection=0');
+exit();
+}
+
+}
+
+} catch
+(PDOException $e) {
+die('Erreur: ' . $e->getMessage());
+}
+
+echo '
+<a class="button" href="monCompte.php">Annuler</a>
 </body>
 <footer>
     Criée Poulgoazec, 29780 Plouhinec - +33 (0)2 98 70 77 19
 </footer>
-</html>
+<script>
+    var ajoutEnchere;
+
+    function enchereFictive() {
+
+
+        var montantActu = ' . $prixDepart . ';
+        montantActu=parseInt(montantActu);
+        var rand =Math.floor((Math.random() * 1) + 7);
+        alert(rand);
+        var divMontantActu = document.getElementById(\'montantActu\').val();
+        divMontantActu=montantActu+rand;
+        alert(montantActu);
+
+
+        divMontantActu.slideUp();
+        window.location.reload();
+    }
+
+    var tpsEntreEnchere=Math.floor((Math.random() * 15000) + 45000);
+
+    ajoutEnchere=setInterval(enchereFictive, 2000 );
+</script>
+</html>';
+?>

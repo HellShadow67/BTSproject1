@@ -15,42 +15,8 @@
     <link rel="stylesheet" href="../Libs/jquery-ui.css">
     <link rel="stylesheet" href="../Libs/bootstrap.min.css">
     <script src="../Libs/jquery-3.1.1.js"></script>
-    <script src="../Libs/jquery.countdown.js"></script>
     <script src="../Libs/jquery-ui.js"></script>
-    <link rel="stylesheet" href="../Libs/jquery.countdown.css">
-    <script type="text/javascript">
 
-        var seconds = 60;
-        var timer;
-        var minutes = 4;
-
-        function countdown() {
-            var container = document.getElementById('tpsRest');
-            seconds--;
-            if (seconds == 0 && minutes >= 0) {
-                minutes--;
-                seconds = 60;
-                container.innerHTML = 'Il reste <b>' + minutes + '</b> minutes et <b>0</b> secondes avant la fin de la vente.';
-            }
-            else if (seconds > 0 && minutes >= 0) {
-                container.innerHTML = 'Il reste <b>' + minutes + '</b> minutes et <b>' + seconds + '</b> secondes avant la fin de la vente.';
-            }
-            else {
-
-                container.innerHTML = 'L\'enchère est terminée!';
-                clearInterval(timer);
-            }
-
-        }
-
-
-        timer = setInterval(countdown, 1000);
-
-
-
-
-
-    </script>
 </head>
 <body class="img-criee">
 
@@ -130,10 +96,6 @@ try {
      </form>
     </div>
 </div>
-<div id="expireDiv" class="row" style="border-top: solid 1px #ccc; padding-top: 15px;">
-        <label>Temps Restant:</label></br>
-        <p id="tpsRest"></p>
-</div>
 
 </div>
 </div>
@@ -150,11 +112,6 @@ try {
         <label>Montant actuel:</label></br>
         <p id="montantActuel"></p>
          </div>
-    <div id="expireDiv" class="col-md-6 col-sm-6 col-lg-6">
-
-        <label>Temps Restant:</label></br>
-        <p id="tpsRest"></p>
-        </div>
 </div>
 </div>
 </div>';
@@ -170,35 +127,10 @@ try {
 (PDOException $e) {
     die('Erreur: ' . $e->getMessage());
 }
-
-echo '
+?>
 <a class="button" href="monCompte.php">Annuler</a>
 </body>
 <footer>
     Criée Poulgoazec, 29780 Plouhinec - +33 (0)2 98 70 77 19
 </footer>
-<script>
-    var ajoutEnchere;
-
-    function enchereFictive() {
-
-
-        var montantActu = ' . $prixDepart . ';
-        montantActu=parseInt(montantActu);
-var rand =Math.floor((Math.random() * 1) + 7);
-alert(rand);
-var divMontantActu = document.getElementById(\'montantActu\').val();
-       divMontantActu=montantActu+rand;
-        alert(montantActu);
-        
-        
-          divMontantActu.slideUp();
-            window.location.reload();
-    }
-    
-    var tpsEntreEnchere=Math.floor((Math.random() * 15000) + 45000);
-
-    ajoutEnchere=setInterval(enchereFictive, 2000 );
-</script>
-</html>';
-?>
+</html>
