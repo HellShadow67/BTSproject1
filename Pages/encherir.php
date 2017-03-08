@@ -22,25 +22,29 @@
 
 <a class="button" href="logout.php">Déconnection</a>
 
-
+<form method="post" action="encherirTraitement.php">
 <h1>Enchère</h1>
 <?php
 session_start();
 
-
-$enchereSelectionnée = $_POST['enchereSelectionnee'];
-
-
-$separation = explode("?", $enchereSelectionnée);
-$idLot = $separation[0];
-$datePeche = $separation[1];
-$idBateau = $separation[2];
-
 $bdd = new PDO('mysql:host=localhost;dbname=lacriee;charset=utf8', 'root', '');
 
 
+
+
 try {
-    if ($bdd != null) {
+    if ($bdd != null ) {
+       if ( $_SESSION['status'] == 'acheteur' || $_SESSION['status'] == 'crieur'){
+
+           $enchereSelectionnee = $_POST['enchereSelectionnee'];
+
+
+           $separation = explode("?", $enchereSelectionnee);
+           $idLot = $separation[0];
+           $datePeche = $separation[1];
+           $idBateau = $separation[2];
+
+
 
         $requete = "Select prixPlancher,nomImg, prixDepart,specification,immatriculationBateau,nomScient, codeEsp, libelleQual,tare, poidsBrutLot, libellePres, nomComm,nomBateau from lot l,espece,bac,qualite,taille, presentation, peche, bateau where l.idEsp=espece.idEsp and l.datePeche=peche.datePeche and l.idBateau=peche.idBateau and peche.idBateau=bateau.idBateau and l.idTaille=taille.idTaille and l.idPres=presentation.idpres and l.idQual=qualite.idQual and l.idBac=bac.idBac and l.datePeche='" . $datePeche . "' and l.idBateau=" . $idBateau . " and l.idLot=" . $idLot;
 
@@ -115,9 +119,10 @@ try {
 </div>
 </div>
 </div>';
-
+        }
         } else {
-            header('Location: login.html?connection=0');
+
+           header('Location: login.html?connection=0');
             exit();
         }
 

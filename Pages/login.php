@@ -4,7 +4,7 @@ $mdp = addslashes($_POST['motDePasse']);
 $pwd = null;
 $pwd2 = null;
 
-$bdd = new PDO('mysql:host=10.129.180.123;dbname=lacriee;charset=utf8', 'root', 'ArtemisLL');
+$bdd = new PDO('mysql:host=localhost;dbname=lacriee;charset=utf8', 'root', '');
 
 
 try {
