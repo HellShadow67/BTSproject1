@@ -94,7 +94,12 @@ try {
     <div class="col-md-6 col-sm-6 col-lg-6">
     <form>
         <label>Enchère:</label></br>
-        <input type="number" min="1" name="montantActu" required/>   
+        ';
+            $enchereMin=intval($prixDepart)+1;
+
+            echo '
+        <input type="number" min="'.$enchereMin.'" name="montantActu" required/>   
+        <input type="hidden" value="'.$enchereSelectionnee.'" name="lotId" />
             </br>
         <input type="submit" value="Enchérir" style="margin-left: 85%;"/>
      </form>
