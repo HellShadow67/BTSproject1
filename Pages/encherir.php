@@ -1,6 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
+
     <link rel="stylesheet" href="style.css"/>
     <!--[if lt IE 9]>
     <script src="http://github.com/aFarkas/html5shiv/blob/master/dist/html5shiv.js"></script>
@@ -36,17 +37,33 @@ try {
     if ($bdd != null ) {
        if ( $_SESSION['status'] == 'acheteur' || $_SESSION['status'] == 'crieur'){
 
-           $enchereSelectionnee = $_POST['enchereSelectionnee'];
 
 
-           $separation = explode("?", $enchereSelectionnee);
-           $idLot = $separation[0];
-           $datePeche = $separation[1];
-           $idBateau = $separation[2];
+           if ( $_SESSION['previous_location']=='monCompte') {
+
+               $enchereSelectionnee = $_POST['enchereSelectionnee'];
+
+
+               $separation = explode("?", $enchereSelectionnee);
+               $idLot = $separation[0];
+               $datePeche = $separation[1];
+               $idBateau = $separation[2];
+
+               $_SESSION['idlot'] = $idLot;
+               $_SESSION['datePeche'] = $datePeche;
+               $_SESSION['idBateau'] = $idBateau;
+           }
+
+               $idLot = $_SESSION['idlot'];
+               $datePeche = $_SESSION['datePeche'];
+               $idBateau = $_SESSION['idBateau'];
 
 
 
-        $requete = "Select prixPlancher,nomImg, prixDepart,specification,immatriculationBateau,nomScient, codeEsp, libelleQual,tare, poidsBrutLot, libellePres, nomComm,nomBateau from lot l,espece,bac,qualite,taille, presentation, peche, bateau where l.idEsp=espece.idEsp and l.datePeche=peche.datePeche and l.idBateau=peche.idBateau and peche.idBateau=bateau.idBateau and l.idTaille=taille.idTaille and l.idPres=presentation.idpres and l.idQual=qualite.idQual and l.idBac=bac.idBac and l.datePeche='" . $datePeche . "' and l.idBateau=" . $idBateau . " and l.idLot=" . $idLot;
+
+
+
+           $requete = "Select prixEnchere,prixPlancher,nomImg, prixDepart,specification,immatriculationBateau,nomScient, codeEsp, libelleQual,tare, poidsBrutLot, libellePres, nomComm,nomBateau from lot l,espece,bac,qualite,taille, presentation, peche, bateau where l.idEsp=espece.idEsp and l.datePeche=peche.datePeche and l.idBateau=peche.idBateau and peche.idBateau=bateau.idBateau and l.idTaille=taille.idTaille and l.idPres=presentation.idpres and l.idQual=qualite.idQual and l.idBac=bac.idBac and l.datePeche='" . $_SESSION['datePeche'] . "' and l.idBateau=" . $_SESSION['idBateau'] . " and l.idLot=" . $_SESSION['idlot'];
 
 
         $resultat = $bdd->prepare($requete);
@@ -68,6 +85,7 @@ try {
         $poidsNet = $donnees['poidsBrutLot'] - $donnees['tare'];
         $prixDepart = $donnees['prixDepart'];
         $prixPlacher = $donnees['prixPlancher'];
+        $prixEnchere=$donnees['prixEnchere'];
 
         echo '
         <tr><td><b>Poids Brut: </b>' . $donnees['poidsBrutLot'] . 'kg</td><td><b>Tare:</b> ' . $donnees['tare'] . 'kg</td><td><b>Poids net: </b>' . $poidsNet . 'kg</td></tr>
@@ -79,6 +97,13 @@ try {
 </div>
 ';
 
+           if ( $_SESSION['previous_location']=='monCompte') {
+               $montantActu=$prixDepart;
+           }
+           else if($_SESSION['previous_location']=='traitement')
+           {
+               $montantActu=$prixEnchere;
+           }
 
         if ($_SESSION['status'] == 'acheteur') {
 
@@ -88,18 +113,24 @@ try {
 <div class="row">
     <div class="col-md-6 col-sm-6 col-lg-6" style="border-right: solid 1px #ccc">
         <label>Montant actuel:</label>
-        <input id="montantActuel" type="text" value="' . $prixDepart . '" readonly/>€
+        <input id="montantActuel" type="text" value="' . $montantActu . '" readonly/>€
         <a class="button-enchere" style="margin-left: 86%;" >Stop</a>
     </div>
     <div class="col-md-6 col-sm-6 col-lg-6">
     <form>
         <label>Enchère:</label></br>
         ';
+            if ( $_SESSION['previous_location']=='monCompte') {
             $enchereMin=intval($prixDepart)+1;
+            }
+            else if($_SESSION['previous_location']=='traitement')
+            {
+                $enchereMin=intval($prixEnchere)+1;
+            }
 
             echo '
         <input type="number" min="'.$enchereMin.'" name="montantActu" required/>   
-        <input type="hidden" value="'.$enchereSelectionnee.'" name="lotId" />
+
             </br>
         <input type="submit" value="Enchérir" style="margin-left: 85%;"/>
      </form>
@@ -119,7 +150,9 @@ try {
         <div class="col-md-6 col-sm-6 col-lg-6" style="border-right: solid 1px #ccc">
 
         <label>Montant actuel:</label></br>
-        <p id="montantActuel"></p>
+        <p id="montantActuel">
+                <input id="montantActuel" type="text" value="' . $montantActu . '" readonly/>€
+</p>
          </div>
 </div>
 </div>
@@ -139,6 +172,7 @@ try {
 }
 ?>
 <a class="button" href="monCompte.php">Annuler</a>
+    <a class="button"  href="monCompte.php">Valider</a>
 </body>
 <footer>
     Criée Poulgoazec, 29780 Plouhinec - +33 (0)2 98 70 77 19

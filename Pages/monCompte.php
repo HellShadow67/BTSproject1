@@ -53,12 +53,12 @@
 
 <?php
 session_start();
-// $_SESSION['login']
-//$_SESSION['status']
+
+$_SESSION['previous_location']='monCompte';
 
 $bdd = new PDO('mysql:host=localhost;dbname=lacriee;charset=utf8', 'root', '');
 
-$aPartirDe='2016-08-25';
+$aPartirDe='2017-03-10';
 
 
 try {
