@@ -1,6 +1,5 @@
 Use lacriee;
 
-
 Insert into Qualite values('A','glacé'),
   ('B','déclassé'),
   ('E','extra');
@@ -8,7 +7,6 @@ Insert into Qualite values('A','glacé'),
 Insert into Presentation values('ET','Etété'),
   ('ENT','Entier'),
   ('VID','Vidé');
-
 
 Insert into Taille values(10,'Taille de 10'),
   (15,'Taille de 15'),
@@ -28,8 +26,6 @@ Insert into Taille values(10,'Taille de 10'),
   (85,'Taille de 85'),
   (90,'Taille de 90'),
   (95,'Taille de 95');
-
-
 
 Insert into Acheteur values(1,'Treant_Marcel','TM','Audierne Marée','2 rue de la République','PLOUHINEC','29780','CP40001000'),
   (2,'Peren_Stephanie','PS','Rosatlantic','10 rue de la République','PLOUHINEC','29780','CP30002222'),
@@ -223,8 +219,6 @@ Insert into Lot values('2008-07-18', 11, 1, 32130, 40, 'VID', 'E', 'B', 8.40, 7.
   ('2017-03-09', 11, 1, 33091, 30, 'ENT', 'B', 'F', 14.60, NULL, '2017-03-10', '2017-03-10 05:39:25', 2.00, 2.00, 'E', NULL, NULL,'2'),
   ('2017-03-10', 11, 2, 57050, 15, 'ENT', 'E', 'F', 15.60, NULL, '2017-03-10', '2017-03-10 16:43:25', 2.00, 2.00, 'E', NULL, NULL,'1'),
   ('2008-08-25',  5, 7, 33090, 25, 'ENT', 'E', 'B', 15.80, NULL, '2008-08-25', '2008-08-25 16:47:25', 2.00, 2.00, 'E', NULL, NULL,'1');
-
-
 
 Insert into Poster values('2008-07-18', 11, 1, 1, 7.45, '2008-07-18 10:17:08'),
   ('2008-07-18', 11, 1, 3, 6.55, '2008-07-18 10:15:18'),

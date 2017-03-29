@@ -220,6 +220,7 @@ try {
     <ul>
         <li><a href="#tabs-1">Profil</a></li>
         <li><a href="#tabs-2">Enchère(s) du jour</a></li>
+
     </ul>
      <div id="tabs-1">
      <p class="col-xs-5 .col-sm-6 .col-lg-4">
@@ -309,7 +310,7 @@ try {
  <input type="submit" value="Valider" />  
 
 </form>
-
+<a class="button" href="gestion.php">Gestion des lots</a>
     </div>
 </div>';
 
