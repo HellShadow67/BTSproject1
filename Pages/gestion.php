@@ -54,7 +54,7 @@ if ($_SESSION['status'] == 'crieur'){
     </ul>
 
     <div id="tabs-1">
-        <form method="post" action="ajouts.php">
+        <form method="post" action="ajoutBateau.php">
             <table class="formulaire">
                 <tr class="darkGrey">
                     <td>
@@ -76,7 +76,7 @@ if ($_SESSION['status'] == 'crieur'){
         </form>
     </div>
     <div id="tabs-2">
-        <form method="post" action="ajouts.php">
+        <form method="post" action="ajoutLot.php">
             <table class="formulaire">
                 <tr class="darkGrey">
                     <td>
@@ -221,19 +221,19 @@ if ($_SESSION['status'] == 'crieur'){
                         Poids brut:
                     </td>
                     <td>
-                        <input id="poidsBrut" min="1" type="number" value="poidsB" required/>€
+                        <input name="poidsBrut" min="1" type="number" value="poidsB" required/>€
                     </td>
                     <td>
                         Prix plancher:
                     </td>
                     <td>
-                        <input id="prixPlancher" min="1" type="number" value="prixPlan" required/>€
+                        <input name="prixPlancher" min="1" type="number" value="prixPlan" required/>€
                     </td>
                     <td>
                         Prix de départ:
                     </td>
                     <td>
-                        <input id="prixDepart" min="1" type="number" value="prixDep" required/>€
+                        <input name="prixDepart" min="1" type="number" value="prixDep" required/>€
                     </td>
                 </tr>
                 <tr class="lightgrey">
@@ -241,19 +241,19 @@ if ($_SESSION['status'] == 'crieur'){
                         Date de peche:
                     </td>
                     <td>
-                        <input type="date" id="datePeche" required/>
+                        <input type="date" name="datePeche" required/>
                     </td>
                     <td>
                         Date de l'enchère:
                     </td>
                     <td>
-                        <input type="date" id="dateEnchere" required/>
+                        <input type="date" name="dateEnchere" required/>
                     </td>
                     <td>
                         Heure de l'enchère:
                     </td>
                     <td>
-                        <input type="time" id="heureEnch">
+                        <input type="time" name="heureEnch" required>
                     </td>
                 </tr>
             </table>
