@@ -58,7 +58,7 @@ $_SESSION['previous_location']='monCompte';
 
 $bdd = new PDO('mysql:host=localhost;dbname=lacriee;charset=utf8', 'root', '');
 
-$aPartirDe='2017-03-10';
+$aPartirDe=date("Y-m-d");
 
 
 try {
@@ -270,7 +270,7 @@ try {
       
 
 
-            $requete3 = "Select prixPlancher, prixDepart, l.datePeche,specification, libelleQual,tare, l.idBateau, poidsBrutLot, dateEnchere, libellePres, nomComm, idLot,nomBateau, idAcheteur from lot l,espece,bac,qualite,taille, presentation, peche, bateau where l.idEsp=espece.idEsp and l.datePeche=peche.datePeche and l.idBateau=peche.idBateau and peche.idBateau=bateau.idBateau and l.idTaille=taille.idTaille and l.idPres=presentation.idpres and l.idQual=qualite.idQual and l.idBac=bac.idBac and l.datePeche ='". $aPartirDe ."' and idAcheteur IS NULL and idCrieur=". $idCrieur ." order by dateEnchere desc";
+            $requete3 = "Select prixPlancher, prixDepart, l.datePeche,specification, libelleQual,tare, l.idBateau, poidsBrutLot, dateEnchere, libellePres, nomComm, idLot,nomBateau, idAcheteur from lot l,espece,bac,qualite,taille, presentation, peche, bateau where l.idEsp=espece.idEsp and l.datePeche=peche.datePeche and l.idBateau=peche.idBateau and peche.idBateau=bateau.idBateau and l.idTaille=taille.idTaille and l.idPres=presentation.idpres and l.idQual=qualite.idQual and l.idBac=bac.idBac and l.datePeche >='". $aPartirDe ."' and idAcheteur IS NULL and idCrieur=". $idCrieur ." order by dateEnchere desc";
 
 
             $resultat3 = $bdd->prepare($requete3);

@@ -1,3 +1,5 @@
+Use lacriee;
+
 DELIMITER //
 DROP TRIGGER IF EXISTS ValeureNegative 
  //

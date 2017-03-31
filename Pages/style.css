@@ -1,5 +1,12 @@
 @media all and (max-width: 679px) {
 
+    .box__dragndrop,
+    .box__uploading,
+    .box__success,
+    .box__error {
+        display: none;
+    }
+
     p {
         text-shadow: 2px 2px 4px white;
         text-align: justify;
@@ -464,9 +471,22 @@
     .formulaire td{
         padding: 10px;
     }
+    .box__dragndrop,
+    .box__uploading,
+    .box__success,
+    .box__error {
+        display: none;
+    }
 }
 
 @media all and (min-width: 960px) {
+
+    .box__dragndrop,
+    .box__uploading,
+    .box__success,
+    .box__error {
+        display: none;
+    }
 
     p {
         text-shadow: 2px 2px 4px white;
@@ -695,6 +715,5 @@
 
 }
 .formulaire td{
-    padding: 10px;
 }
 }

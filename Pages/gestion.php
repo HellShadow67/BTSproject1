@@ -19,9 +19,11 @@
     <script src="../Libs/jquery-3.1.1.js"></script>
     <script src="../Libs/jquery-ui.js"></script>
     <script>
+        
         $(function () {
             $("#tabs").tabs();
         });
+
     </script>
 </head>
 <?php
@@ -51,6 +53,7 @@ if ($_SESSION['status'] == 'crieur'){
     <ul>
         <li><a href="#tabs-1">Ajout de bateau</a></li>
         <li><a href="#tabs-2">Ajout de lots</a></li>
+        <li><a href="#tabs-3">Ajout d'espèce de poisson</a></li>
     </ul>
 
     <div id="tabs-1">
@@ -257,6 +260,44 @@ if ($_SESSION['status'] == 'crieur'){
                     </td>
                 </tr>
             </table>
+            <input type="submit" value="Valider"/>
+        </form>
+    </div>
+    <div id="tabs-3">
+        <form method="post" action="ajoutEspece.php">
+            <table class="formulaire">
+                <tr class="darkGrey">
+                    <td>
+                        Nom commun de l'espèce:
+                    </td>
+                    <td>
+                        <input type="text" name="nomComm" required/>
+                    </td>
+                    <td>
+                        Code de l'espèce:
+                    </td>
+                    <td>
+                        <input type="text" name="codeE" required/>
+                    </td>
+                </tr>
+                <tr class="lightgrey">
+                    <td>
+                        Nom scientifique:
+                    </td>
+                    <td>
+                        <input type="text" name="nomScient" required/>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+            </table>
+
+
+
+        </br>
+
             <input type="submit" value="Valider"/>
         </form>
     </div>

@@ -27,7 +27,7 @@ CREATE TABLE Taille(
 #------------------------------------------------------------
 
 CREATE TABLE Qualite(
-        idQual      Varchar (25) NOT NULL ,
+        idQual      Varchar (25) NOT NULL,
         libelleQual Varchar (25) ,
         PRIMARY KEY (idQual )
 )ENGINE=InnoDB;
@@ -49,7 +49,7 @@ CREATE TABLE Bac(
 #------------------------------------------------------------
 
 CREATE TABLE Espece(
-        idEsp     Varchar (25) NOT NULL ,
+        idEsp     int NOT NULL AUTO_INCREMENT,
         nomComm   Varchar (25) ,
         nomScient Varchar (25) ,
 	    	codeEsp Varchar (25) ,
@@ -63,7 +63,7 @@ CREATE TABLE Espece(
 #------------------------------------------------------------
 
 CREATE TABLE Bateau(
-        idBateau              Varchar (25) NOT NULL ,
+        idBateau              INT NOT NULL AUTO_INCREMENT,
         nomBateau             Varchar (25) ,
         immatriculationBateau Varchar (25) ,
         PRIMARY KEY (idBateau )
@@ -76,7 +76,7 @@ CREATE TABLE Bateau(
 
 CREATE TABLE Peche(
         datePeche Date NOT NULL ,
-        idBateau  Varchar (25) NOT NULL ,
+        idBateau  INT NOT NULL ,
         PRIMARY KEY (datePeche ,idBateau )
 )ENGINE=InnoDB;
 
@@ -120,9 +120,9 @@ CREATE TABLE Crieur(
 
 CREATE TABLE Lot(
 		    datePeche         Date NOT NULL ,
-        idBateau          Varchar (25) NOT NULL ,
-        idLot             Varchar (25) NOT NULL ,
-	    	idEsp             Varchar (25) ,
+        idBateau          INT NOT NULL ,
+        idLot             int NOT NULL AUTO_INCREMENT,
+	    	idEsp             int ,
 	    	idTaille          int,
 		    idPres            Varchar (25) ,
 	    	idQual            Varchar (25) ,
@@ -159,8 +159,8 @@ CREATE TABLE Presentation(
 
 CREATE TABLE Poster(
         datePeche    Date NOT NULL ,
-		    idBateau     Varchar (25) NOT NULL ,
-        idLot        Varchar (25) NOT NULL ,
+		    idBateau    INT NOT NULL ,
+        idLot        INT NOT NULL ,
         idAcheteur   Varchar (25) NOT NULL ,
 	    	prixEnchere  float ,
 	    	heureEnchere datetime,

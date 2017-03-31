@@ -48,9 +48,6 @@
         timer = setInterval(countdown, 1000);
 
 
-
-
-
     </script>
 </head>
 <body class="img-criee">
@@ -86,14 +83,27 @@ $resultat->execute();
 
 $donnees = $resultat->fetch();
 
-echo '<div class="encherePanel">
+echo '
+<div class="encherePanel">
     <div class="container-enchere">
         <div class="row">
             <div class="col-lg-9 col-sm-9 col-md-9">
                 <table id="table-description-enchere">
-                    <tr><td><b>Nom Commun: </b>' . $donnees['nomComm'] . '</td><td><b>Nom scientifique:</b> ' . $donnees['nomScient'] . '</td><td><b>Code espèce: </b>' . $donnees['codeEsp'] . '</td></tr>
-                    <tr><td><b>Nom du bateau:</b> ' . $donnees['nomBateau'] . '</td><td><b>Immatriculation du bateau:</b> ' . $donnees['immatriculationBateau'] . '</td><td></td></tr>
-                    <tr><td><b>Spécification: </b>' . $donnees['specification'] . '</td><td><b>Qualité:</b> ' . $donnees['libelleQual'] . '</td><td></td></tr>
+                    <tr>
+                        <td><b>Nom Commun: </b>' . $donnees['nomComm'] . '</td>
+                        <td><b>Nom scientifique:</b> ' . $donnees['nomScient'] . '</td>
+                        <td><b>Code espèce: </b>' . $donnees['codeEsp'] . '</td>
+                    </tr>
+                    <tr>
+                        <td><b>Nom du bateau:</b> ' . $donnees['nomBateau'] . '</td>
+                        <td><b>Immatriculation du bateau:</b> ' . $donnees['immatriculationBateau'] . '</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><b>Spécification: </b>' . $donnees['specification'] . '</td>
+                        <td><b>Qualité:</b> ' . $donnees['libelleQual'] . '</td>
+                        <td></td>
+                    </tr>
 
                     ';
                     $poidsNet = $donnees['poidsBrutLot'] - $donnees['tare'];
@@ -101,11 +111,20 @@ echo '<div class="encherePanel">
                     $prixPlacher = $donnees['prixPlancher'];
 
                     echo '
-                    <tr><td><b>Poids Brut: </b>' . $donnees['poidsBrutLot'] . 'kg</td><td><b>Tare:</b> ' . $donnees['tare'] . 'kg</td><td><b>Poids net: </b>' . $poidsNet . 'kg</td></tr>
-                    <tr><td><b>Prix de départ: </b>' . $donnees['prixDepart'] . '€</td><td><b>Prix plancher:</b> ' . $donnees['prixPlancher'] . '€</td><td></td></tr>
+                    <tr>
+                        <td><b>Poids Brut: </b>' . $donnees['poidsBrutLot'] . 'kg</td>
+                        <td><b>Tare:</b> ' . $donnees['tare'] . 'kg</td>
+                        <td><b>Poids net: </b>' . $poidsNet . 'kg</td>
+                    </tr>
+                    <tr>
+                        <td><b>Prix de départ: </b>' . $donnees['prixDepart'] . '€</td>
+                        <td><b>Prix plancher:</b> ' . $donnees['prixPlancher'] . '€</td>
+                        <td></td>
+                    </tr>
                 </table>
             </div>
-            <div class="col-lg-3 col-sm-3 col-md-3"><img class="img-poisson" src="../Images/Poissons/' . $donnees['nomImg'] . '.jpg"></div>
+            <div class="col-lg-3 col-sm-3 col-md-3"><img class="img-poisson"
+                                                         src="../Images/Poissons/' . $donnees['nomImg'] . '.jpg"></div>
         </div>
     </div>
     ';
@@ -114,31 +133,33 @@ echo '<div class="encherePanel">
     if ($_SESSION['status'] == 'acheteur') {
 
 
-    echo '<div>
-    <div class="container-enchere2">
-        <div class="row">
-            <div class="col-md-6 col-sm-6 col-lg-6" style="border-right: solid 1px #ccc">
-                <label>Montant actuel:</label>
-                <input id="montantActuel" type="text" value="' . $prixDepart . '" readonly/>€
-                <a class="button-enchere" style="margin-left: 86%;" >Stop</a>
+    echo '
+    <div>
+        <div class="container-enchere2">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-lg-6" style="border-right: solid 1px #ccc">
+                    <label>Montant actuel:</label>
+                    <input id="montantActuel" type="text" value="' . $prixDepart . '" readonly/>€
+                    <a class="button-enchere" style="margin-left: 86%;">Stop</a>
+                </div>
+                <div class="col-md-6 col-sm-6 col-lg-6">
+                    <form>
+                        <label>Enchère:</label></br>
+                        <input type="number" min="1" name="montantActu" required/>
+                        </br>
+                        <input type="submit" value="Enchérir" style="margin-left: 85%;"/>
+                    </form>
+                </div>
             </div>
-            <div class="col-md-6 col-sm-6 col-lg-6">
-                <form>
-                    <label>Enchère:</label></br>
-                    <input type="number" min="1" name="montantActu" required/>
-                    </br>
-                    <input type="submit" value="Enchérir" style="margin-left: 85%;"/>
-                </form>
+            <div id="expireDiv" class="row" style="border-top: solid 1px #ccc; padding-top: 15px;">
+                <label>Temps Restant:</label></br>
+                <p id="tpsRest"></p>
             </div>
-        </div>
-        <div id="expireDiv" class="row" style="border-top: solid 1px #ccc; padding-top: 15px;">
-            <label>Temps Restant:</label></br>
-            <p id="tpsRest"></p>
-        </div>
 
+        </div>
     </div>
 </div>
-</div>';
+';
 
 
 } elseif ($_SESSION['status'] == 'crieur') {
@@ -185,11 +206,11 @@ echo '
 
 
         var montantActu = ' . $prixDepart . ';
-        montantActu=parseInt(montantActu);
-        var rand =Math.floor((Math.random() * 1) + 7);
+        montantActu = parseInt(montantActu);
+        var rand = Math.floor((Math.random() * 1) + 7);
         alert(rand);
         var divMontantActu = document.getElementById(\'montantActu\').val();
-        divMontantActu=montantActu+rand;
+        divMontantActu = montantActu + rand;
         alert(montantActu);
 
 
@@ -197,9 +218,9 @@ echo '
         window.location.reload();
     }
 
-    var tpsEntreEnchere=Math.floor((Math.random() * 15000) + 45000);
+    var tpsEntreEnchere = Math.floor((Math.random() * 15000) + 45000);
 
-    ajoutEnchere=setInterval(enchereFictive, 2000 );
+    ajoutEnchere = setInterval(enchereFictive, 2000);
 </script>
 </html>';
 ?>
