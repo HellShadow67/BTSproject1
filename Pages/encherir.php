@@ -24,55 +24,48 @@
 <a class="button" href="logout.php">Déconnection</a>
 
 <form method="post" action="encherirTraitement.php">
-<h1>Enchère</h1>
-<?php
-session_start();
+    <h1>Enchère</h1>
+    <?php
+    session_start();
 
-$bdd = new PDO('mysql:host=localhost;dbname=lacriee;charset=utf8', 'root', '');
-
-
+    $bdd = new PDO('mysql:host=localhost;dbname=lacriee;charset=utf8', 'root', '');
 
 
-try {
-    if ($bdd != null ) {
-       if ( $_SESSION['status'] == 'acheteur' || $_SESSION['status'] == 'crieur'){
+    try {
+        if ($bdd != null) {
+            if ($_SESSION['status'] == 'acheteur' || $_SESSION['status'] == 'crieur') {
 
 
+                if ($_SESSION['previous_location'] == 'monCompte') {
 
-           if ( $_SESSION['previous_location']=='monCompte') {
-
-               $enchereSelectionnee = $_POST['enchereSelectionnee'];
-
-
-               $separation = explode("?", $enchereSelectionnee);
-               $idLot = $separation[0];
-               $datePeche = $separation[1];
-               $idBateau = $separation[2];
-
-               $_SESSION['idlot'] = $idLot;
-               $_SESSION['datePeche'] = $datePeche;
-               $_SESSION['idBateau'] = $idBateau;
-           }
-
-               $idLot = $_SESSION['idlot'];
-               $datePeche = $_SESSION['datePeche'];
-               $idBateau = $_SESSION['idBateau'];
+                    $enchereSelectionnee = $_POST['enchereSelectionnee'];
 
 
+                    $separation = explode("?", $enchereSelectionnee);
+                    $idLot = $separation[0];
+                    $datePeche = $separation[1];
+                    $idBateau = $separation[2];
+
+                    $_SESSION['idlot'] = $idLot;
+                    $_SESSION['datePeche'] = $datePeche;
+                    $_SESSION['idBateau'] = $idBateau;
+                }
+
+                $idLot = $_SESSION['idlot'];
+                $datePeche = $_SESSION['datePeche'];
+                $idBateau = $_SESSION['idBateau'];
 
 
+                $requete = "Select prixEnchere,prixPlancher,nomImg, prixDepart,specification,immatriculationBateau,nomScient, codeEsp, libelleQual,tare, poidsBrutLot, libellePres, nomComm,nomBateau from lot l,espece,bac,qualite,taille, presentation, peche, bateau where l.idEsp=espece.idEsp and l.datePeche=peche.datePeche and l.idBateau=peche.idBateau and peche.idBateau=bateau.idBateau and l.idTaille=taille.idTaille and l.idPres=presentation.idpres and l.idQual=qualite.idQual and l.idBac=bac.idBac and l.datePeche='" . $_SESSION['datePeche'] . "' and l.idBateau=" . $_SESSION['idBateau'] . " and l.idLot=" . $_SESSION['idlot'];
 
 
-           $requete = "Select prixEnchere,prixPlancher,nomImg, prixDepart,specification,immatriculationBateau,nomScient, codeEsp, libelleQual,tare, poidsBrutLot, libellePres, nomComm,nomBateau from lot l,espece,bac,qualite,taille, presentation, peche, bateau where l.idEsp=espece.idEsp and l.datePeche=peche.datePeche and l.idBateau=peche.idBateau and peche.idBateau=bateau.idBateau and l.idTaille=taille.idTaille and l.idPres=presentation.idpres and l.idQual=qualite.idQual and l.idBac=bac.idBac and l.datePeche='" . $_SESSION['datePeche'] . "' and l.idBateau=" . $_SESSION['idBateau'] . " and l.idLot=" . $_SESSION['idlot'];
+                $resultat = $bdd->prepare($requete);
+                $resultat->execute();
 
 
-        $resultat = $bdd->prepare($requete);
-        $resultat->execute();
+                $donnees = $resultat->fetch();
 
-
-        $donnees = $resultat->fetch();
-
-        echo '<div class="encherePanel">
+                echo '<div class="encherePanel">
 <div class="container-enchere">
 <div class="row">
 <div class="col-lg-9 col-sm-9 col-md-9">
@@ -82,12 +75,12 @@ try {
         <tr><td><b>Spécification: </b>' . $donnees['specification'] . '</td><td><b>Qualité:</b> ' . $donnees['libelleQual'] . '</td><td></td></tr>
 
 ';
-        $poidsNet = $donnees['poidsBrutLot'] - $donnees['tare'];
-        $prixDepart = $donnees['prixDepart'];
-        $prixPlacher = $donnees['prixPlancher'];
-        $prixEnchere=$donnees['prixEnchere'];
+                $poidsNet = $donnees['poidsBrutLot'] - $donnees['tare'];
+                $prixDepart = $donnees['prixDepart'];
+                $prixPlacher = $donnees['prixPlancher'];
+                $prixEnchere = $donnees['prixEnchere'];
 
-        echo '
+                echo '
         <tr><td><b>Poids Brut: </b>' . $donnees['poidsBrutLot'] . 'kg</td><td><b>Tare:</b> ' . $donnees['tare'] . 'kg</td><td><b>Poids net: </b>' . $poidsNet . 'kg</td></tr>
         <tr><td><b>Prix de départ: </b>' . $donnees['prixDepart'] . '€</td><td><b>Prix plancher:</b> ' . $donnees['prixPlancher'] . '€</td><td></td></tr>
     </table>
@@ -97,18 +90,16 @@ try {
 </div>
 ';
 
-           if ( $_SESSION['previous_location']=='monCompte') {
-               $montantActu=$prixDepart;
-           }
-           else if($_SESSION['previous_location']=='traitement')
-           {
-               $montantActu=$prixEnchere;
-           }
+                if ($_SESSION['previous_location'] == 'monCompte') {
+                    $montantActu = $prixDepart;
+                } else if ($_SESSION['previous_location'] == 'traitement') {
+                    $montantActu = $prixEnchere;
+                }
 
-        if ($_SESSION['status'] == 'acheteur') {
+                if ($_SESSION['status'] == 'acheteur') {
 
 
-            echo '<div>
+                    echo '<div>
 <div class="container-enchere2">
 <div class="row">
     <div class="col-md-6 col-sm-6 col-lg-6" style="border-right: solid 1px #ccc">
@@ -120,16 +111,14 @@ try {
     <form>
         <label>Enchère:</label></br>
         ';
-            if ( $_SESSION['previous_location']=='monCompte') {
-            $enchereMin=intval($prixDepart)+1;
-            }
-            else if($_SESSION['previous_location']=='traitement')
-            {
-                $enchereMin=intval($prixEnchere)+1;
-            }
+                    if ($_SESSION['previous_location'] == 'monCompte') {
+                        $enchereMin = intval($prixDepart) + 1;
+                    } else if ($_SESSION['previous_location'] == 'traitement') {
+                        $enchereMin = intval($prixEnchere) + 1;
+                    }
 
-            echo '
-        <input type="number" min="'.$enchereMin.'" name="montantActu" required/>   
+                    echo '
+        <input type="number" min="' . $enchereMin . '" name="montantActu" required/>   
 
             </br>
         <input type="submit" value="Enchérir" style="margin-left: 85%;"/>
@@ -142,9 +131,9 @@ try {
 </div>';
 
 
-        } elseif ($_SESSION['status'] == 'crieur') {
+                } elseif ($_SESSION['status'] == 'crieur') {
 
-            echo '
+                    echo '
  <div class="container-enchere2">
     <div class="row">
         <div class="col-md-6 col-sm-6 col-lg-6" style="border-right: solid 1px #ccc">
@@ -157,22 +146,22 @@ try {
 </div>
 </div>
 </div>';
-        }
-        } else {
+                }
+            } else {
 
-           header('Location: login.html?connection=0');
-            exit();
+                header('Location: login.html?connection=0');
+                exit();
+            }
+
         }
 
+    } catch
+    (PDOException $e) {
+        die('Erreur: ' . $e->getMessage());
     }
-
-} catch
-(PDOException $e) {
-    die('Erreur: ' . $e->getMessage());
-}
-?>
-<a class="button" href="monCompte.php">Annuler</a>
-    <a class="button"  href="monCompte.php">Valider</a>
+    ?>
+    <a class="button" href="monCompte.php">Annuler</a>
+    <a class="button" href="monCompte.php">Valider</a>
 </body>
 <footer>
     Criée Poulgoazec, 29780 Plouhinec - +33 (0)2 98 70 77 19

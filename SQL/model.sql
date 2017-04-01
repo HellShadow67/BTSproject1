@@ -53,7 +53,7 @@ CREATE TABLE Espece(
         nomComm   Varchar (25) ,
         nomScient Varchar (25) ,
 	    	codeEsp Varchar (25) ,
-	    	nomImg Varchar (25) ,
+	    	nomImg Varchar (100) ,
         PRIMARY KEY (idEsp )
 )ENGINE=InnoDB;
 

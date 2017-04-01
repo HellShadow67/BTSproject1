@@ -21,31 +21,53 @@ $heureEnchere = addslashes($_POST['heureEnch']);
 $dateHeureEnchere = $dateEnchere . " " . $heureEnchere . ":00";
 
 
+
+
 try {
     if ($bdd != null) {
 
+        $requete4 = "select tare from bac where idBac='".$bac."'";
+        $resultat4 = $bdd->prepare($requete4);
+        $resultat4->execute();
 
-        $requete = "insert into peche(idBateau,datePeche) values (" . $bateau . ",'" . $datePeche . "')";
-        $resultat = $bdd->prepare($requete);
-        $resultat->execute();
-
-        $requete3 = "select idCrieur from crieur where login='" . $_SESSION['login'] . "';";
-        $resultat3 = $bdd->prepare($requete3);
-        $resultat3->execute();
-
-        while ($data = $resultat3->fetch()) {
-            $idCrieur = $data['idCrieur'];
+        while ($data1 = $resultat4->fetch()) {
+            $tare = $data1['tare'];
         }
 
-
-        $requete2 = "insert into lot(idBateau,datePeche,idEsp,idTaille,idPres,idQual,idBac,poidsBrutLot,dateEnchere,heureDebutEnchere,prixPlancher,prixDepart,idCrieur) values (" . $bateau . ",'" . $datePeche . "'," . $espece . "," . $taille . ",'" . $presentation . "','" . $qualite . "','" . $bac . "',$poidsBrut,'" . $dateEnchere . "','" . $dateHeureEnchere . "',$prixPlancher,$prixDepart," . $idCrieur . ")";
-        $resultat2 = $bdd->prepare($requete2);
-        $resultat2->execute();
+        $poidsNet = $poidsBrut - $tare;
 
 
-         header('Location: gestion.php');
 
 
+        if ($poidsNet <= 0) {
+
+            header('Location: gestion.php?error=0');
+
+        } else {
+
+
+            $requete = "insert into peche(idBateau,datePeche) values (" . $bateau . ",'" . $datePeche . "')";
+            $resultat = $bdd->prepare($requete);
+            $resultat->execute();
+
+            $requete3 = "select idCrieur from crieur where login='" . $_SESSION['login'] . "';";
+            $resultat3 = $bdd->prepare($requete3);
+            $resultat3->execute();
+
+            while ($data = $resultat3->fetch()) {
+                $idCrieur = $data['idCrieur'];
+            }
+
+
+            $requete2 = "insert into lot(idBateau,datePeche,idEsp,idTaille,idPres,idQual,idBac,poidsBrutLot,dateEnchere,heureDebutEnchere,prixPlancher,prixDepart,idCrieur) values (" . $bateau . ",'" . $datePeche . "'," . $espece . "," . $taille . ",'" . $presentation . "','" . $qualite . "','" . $bac . "',$poidsBrut,'" . $dateEnchere . "','" . $dateHeureEnchere . "',$prixPlancher,$prixDepart," . $idCrieur . ")";
+            $resultat2 = $bdd->prepare($requete2);
+            $resultat2->execute();
+
+
+            header('Location: gestion.php');
+
+
+        }
     }
 } catch (PDOException $e) {
     die('Erreur: ' . $e->getMessage());

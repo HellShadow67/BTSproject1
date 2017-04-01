@@ -154,7 +154,7 @@ try {
     </div>
     <div id="tabs-3">';
 
-            $requete3 = "Select prixPlancher, prixDepart, l.datePeche,specification, libelleQual,tare, l.idBateau, poidsBrutLot, dateEnchere, libellePres, nomComm, idLot,nomBateau, idAcheteur from lot l,espece,bac,qualite,taille, presentation, peche, bateau where l.idEsp=espece.idEsp and l.datePeche=peche.datePeche and l.idBateau=peche.idBateau and peche.idBateau=bateau.idBateau and l.idTaille=taille.idTaille and l.idPres=presentation.idpres and l.idQual=qualite.idQual and l.idBac=bac.idBac and l.datePeche ='". $aPartirDe ."' and idAcheteur IS NULL order by dateEnchere desc";
+            $requete3 = "Select prixPlancher, prixDepart, l.datePeche,specification, libelleQual,tare, l.idBateau, poidsBrutLot, dateEnchere, libellePres, nomComm, idLot,nomBateau, idAcheteur from lot l,espece,bac,qualite,taille, presentation, peche, bateau where l.idEsp=espece.idEsp and l.datePeche=peche.datePeche and l.idBateau=peche.idBateau and peche.idBateau=bateau.idBateau and l.idTaille=taille.idTaille and l.idPres=presentation.idpres and l.idQual=qualite.idQual and l.idBac=bac.idBac and l.dateEnchere >='". $aPartirDe ."' and idAcheteur IS NULL order by dateEnchere desc";
 
 
             $resultat3 = $bdd->prepare($requete3);
@@ -270,7 +270,7 @@ try {
       
 
 
-            $requete3 = "Select prixPlancher, prixDepart, l.datePeche,specification, libelleQual,tare, l.idBateau, poidsBrutLot, dateEnchere, libellePres, nomComm, idLot,nomBateau, idAcheteur from lot l,espece,bac,qualite,taille, presentation, peche, bateau where l.idEsp=espece.idEsp and l.datePeche=peche.datePeche and l.idBateau=peche.idBateau and peche.idBateau=bateau.idBateau and l.idTaille=taille.idTaille and l.idPres=presentation.idpres and l.idQual=qualite.idQual and l.idBac=bac.idBac and l.datePeche >='". $aPartirDe ."' and idAcheteur IS NULL and idCrieur=". $idCrieur ." order by dateEnchere desc";
+            $requete3 = "Select prixPlancher, prixDepart, l.datePeche,specification, libelleQual,tare, l.idBateau, poidsBrutLot, dateEnchere, libellePres, nomComm, idLot,nomBateau, idAcheteur from lot l,espece,bac,qualite,taille, presentation, peche, bateau where l.idEsp=espece.idEsp and l.datePeche=peche.datePeche and l.idBateau=peche.idBateau and peche.idBateau=bateau.idBateau and l.idTaille=taille.idTaille and l.idPres=presentation.idpres and l.idQual=qualite.idQual and l.idBac=bac.idBac and l.dateEnchere >='". $aPartirDe ."' and idAcheteur IS NULL and idCrieur=". $idCrieur ." order by dateEnchere desc";
 
 
             $resultat3 = $bdd->prepare($requete3);

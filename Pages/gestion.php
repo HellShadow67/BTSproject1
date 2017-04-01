@@ -24,6 +24,28 @@
             $("#tabs").tabs();
         });
 
+        function $_GET(param) {
+            var vars = {};
+            window.location.href.replace(location.hash, '').replace(
+                /[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
+                function (m, key, value) { // callback
+                    vars[key] = value !== undefined ? value : '';
+                }
+            );
+
+            if (param) {
+                return vars[param] ? vars[param] : null;
+            }
+            return vars;
+        }
+
+        var $_GET = $_GET(),
+            statusLog = $_GET['error'];
+
+        if (statusLog == 0) {
+            alert('Le poids brut ne peut pas être inférieur à la tare!')
+        }
+
     </script>
 </head>
 <?php
@@ -40,7 +62,6 @@ try {
 if ($bdd != null) {
 
 if ($_SESSION['status'] == 'crieur'){
-
 
 ?>
 
@@ -264,7 +285,7 @@ if ($_SESSION['status'] == 'crieur'){
         </form>
     </div>
     <div id="tabs-3">
-        <form method="post" action="ajoutEspece.php">
+        <form method="post" action="ajoutEspece.php" enctype="multipart/form-data">
             <table class="formulaire">
                 <tr class="darkGrey">
                     <td>
@@ -295,7 +316,11 @@ if ($_SESSION['status'] == 'crieur'){
             </table>
 
 
+                Selectionnez une image:
+                <input type="file" name="fileToUpload" id="fileToUpload">
 
+
+            </br>
         </br>
 
             <input type="submit" value="Valider"/>
