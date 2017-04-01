@@ -19,7 +19,7 @@
     <script src="../Libs/jquery-3.1.1.js"></script>
     <script src="../Libs/jquery-ui.js"></script>
     <script>
-        
+
         $(function () {
             $("#tabs").tabs();
         });

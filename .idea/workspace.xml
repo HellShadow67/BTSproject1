@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd6f4940-de84-4681-b629-8cb5bd24e834" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pages/ajoutEspece.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pages/ajoutBateau.php" afterPath="$PROJECT_DIR$/Pages/ajoutBateau.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pages/ajoutLot.php" afterPath="$PROJECT_DIR$/Pages/ajoutLot.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pages/accueil.html" afterPath="$PROJECT_DIR$/Pages/accueil.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pages/gestion.php" afterPath="$PROJECT_DIR$/Pages/gestion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pages/monCompte.php" afterPath="$PROJECT_DIR$/Pages/monCompte.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pages/style.css" afterPath="$PROJECT_DIR$/Pages/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pages/test.html" afterPath="$PROJECT_DIR$/Pages/test.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SQL/model.sql" afterPath="$PROJECT_DIR$/SQL/model.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SQL/trigger.sql" afterPath="$PROJECT_DIR$/SQL/trigger.sql" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,22 +29,22 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="gestion.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gestion.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pages/gestion.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1066">
-              <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
-                <element signature="e#1369#2114#0#HTML" expanded="false" />
-                <element signature="e#2119#8232#0#HTML" expanded="false" />
-                <marker date="1490965115102" expanded="true" signature="2506:2563" ph="SELECT nomBa... bateau" />
-                <marker date="1490965115102" expanded="true" signature="2989:4441" ph="..." />
-                <marker date="1490965115102" expanded="true" signature="3096:3123" ph="..." />
-                <marker date="1490965115102" expanded="true" signature="3224:3274" ph="SELECT nomCo... Espece" />
-                <marker date="1490965115102" expanded="true" signature="3927:3992" ph="SELECT speci... taille" />
-                <marker date="1490965115102" expanded="true" signature="4728:4793" ph="SELECT libel... presentation" />
-                <marker date="1490965115102" expanded="true" signature="5454:5514" ph="SELECT libel... qualite" />
-                <marker date="1490965115102" expanded="true" signature="6168:6209" ph="SELECT idBac... bac" />
+                <element signature="e#1361#2106#0#HTML" expanded="false" />
+                <element signature="e#2111#8224#0#HTML" expanded="false" />
+                <marker date="1490971841787" expanded="true" signature="2498:2555" ph="SELECT nomBa... bateau" />
+                <marker date="1490971841787" expanded="true" signature="2981:4433" ph="..." />
+                <marker date="1490971841787" expanded="true" signature="3088:3115" ph="..." />
+                <marker date="1490971841787" expanded="true" signature="3216:3266" ph="SELECT nomCo... Espece" />
+                <marker date="1490971841787" expanded="true" signature="3919:3984" ph="SELECT speci... taille" />
+                <marker date="1490971841787" expanded="true" signature="4720:4785" ph="SELECT libel... presentation" />
+                <marker date="1490971841787" expanded="true" signature="5446:5506" ph="SELECT libel... qualite" />
+                <marker date="1490971841787" expanded="true" signature="6160:6201" ph="SELECT idBac... bac" />
               </folding>
             </state>
           </provider>
@@ -83,11 +77,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Pages/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="5" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+            <state relative-caret-position="173">
+              <caret line="541" column="63" lean-forward="false" selection-start-line="541" selection-start-column="63" selection-end-line="541" selection-end-column="63" />
+              <folding>
+                <element signature="e#0#4639#0" expanded="false" />
+                <element signature="e#4641#9262#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="accueil.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pages/accueil.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="404">
+              <caret line="43" column="90" lean-forward="false" selection-start-line="43" selection-start-column="90" selection-end-line="43" selection-end-column="90" />
               <folding />
             </state>
           </provider>
@@ -173,7 +180,6 @@
         <option value="$PROJECT_DIR$/Pages/encherirTraitement.php" />
         <option value="$PROJECT_DIR$/Pages/login.html" />
         <option value="$PROJECT_DIR$/Pages/encherir.php" />
-        <option value="$PROJECT_DIR$/Pages/accueil.html" />
         <option value="$PROJECT_DIR$/Pages/gestion.html" />
         <option value="$PROJECT_DIR$/SQL/donnees.sql" />
         <option value="$PROJECT_DIR$/Pages/ajouts.php" />
@@ -184,8 +190,9 @@
         <option value="$PROJECT_DIR$/Pages/monCompte.php" />
         <option value="$PROJECT_DIR$/SQL/model.sql" />
         <option value="$PROJECT_DIR$/Pages/ajoutEspece.php" />
-        <option value="$PROJECT_DIR$/Pages/style.css" />
         <option value="$PROJECT_DIR$/Pages/gestion.php" />
+        <option value="$PROJECT_DIR$/Pages/accueil.html" />
+        <option value="$PROJECT_DIR$/Pages/style.css" />
       </list>
     </option>
   </component>
@@ -785,15 +792,15 @@
       <workItem from="1490170454905" duration="3507000" />
       <workItem from="1490769120420" duration="16906000" />
       <workItem from="1490943331347" duration="701000" />
-      <workItem from="1490958843001" duration="7024000" />
+      <workItem from="1490958843001" duration="8191000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173313000" />
+    <option name="totallyTimeSpent" value="174480000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1370" height="735" extended-state="0" />
+    <frame x="-7" y="0" width="1370" height="735" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1073,13 +1080,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/accueil.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="16" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="17" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pages/gestion.html" />
     <entry file="file://$PROJECT_DIR$/Methodes/selectAll.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1329,29 +1329,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/style.css">
+    <entry file="file://$PROJECT_DIR$/Pages/gestion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="5" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        <state relative-caret-position="-1066">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="e#1361#2106#0#HTML" expanded="false" />
+            <element signature="e#2111#8224#0#HTML" expanded="false" />
+            <marker date="1490971841787" expanded="true" signature="2498:2555" ph="SELECT nomBa... bateau" />
+            <marker date="1490971841787" expanded="true" signature="2981:4433" ph="..." />
+            <marker date="1490971841787" expanded="true" signature="3088:3115" ph="..." />
+            <marker date="1490971841787" expanded="true" signature="3216:3266" ph="SELECT nomCo... Espece" />
+            <marker date="1490971841787" expanded="true" signature="3919:3984" ph="SELECT speci... taille" />
+            <marker date="1490971841787" expanded="true" signature="4720:4785" ph="SELECT libel... presentation" />
+            <marker date="1490971841787" expanded="true" signature="5446:5506" ph="SELECT libel... qualite" />
+            <marker date="1490971841787" expanded="true" signature="6160:6201" ph="SELECT idBac... bac" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/accueil.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="43" column="90" lean-forward="false" selection-start-line="43" selection-start-column="90" selection-end-line="43" selection-end-column="90" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/gestion.php">
+    <entry file="file://$PROJECT_DIR$/Pages/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1066">
-          <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+        <state relative-caret-position="173">
+          <caret line="541" column="63" lean-forward="false" selection-start-line="541" selection-start-column="63" selection-end-line="541" selection-end-column="63" />
           <folding>
-            <element signature="e#1369#2114#0#HTML" expanded="false" />
-            <element signature="e#2119#8232#0#HTML" expanded="false" />
-            <marker date="1490965115102" expanded="true" signature="2506:2563" ph="SELECT nomBa... bateau" />
-            <marker date="1490965115102" expanded="true" signature="2989:4441" ph="..." />
-            <marker date="1490965115102" expanded="true" signature="3096:3123" ph="..." />
-            <marker date="1490965115102" expanded="true" signature="3224:3274" ph="SELECT nomCo... Espece" />
-            <marker date="1490965115102" expanded="true" signature="3927:3992" ph="SELECT speci... taille" />
-            <marker date="1490965115102" expanded="true" signature="4728:4793" ph="SELECT libel... presentation" />
-            <marker date="1490965115102" expanded="true" signature="5454:5514" ph="SELECT libel... qualite" />
-            <marker date="1490965115102" expanded="true" signature="6168:6209" ph="SELECT idBac... bac" />
+            <element signature="e#0#4639#0" expanded="false" />
+            <element signature="e#4641#9262#0" expanded="false" />
           </folding>
         </state>
       </provider>
