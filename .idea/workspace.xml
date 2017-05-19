@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd6f4940-de84-4681-b629-8cb5bd24e834" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SQL/vue.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Docs/TP.doc" afterPath="$PROJECT_DIR$/Docs/TP.doc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SQL/procedureStockee.sql" afterPath="$PROJECT_DIR$/SQL/procedureStockee.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SQL/model.sql" afterPath="$PROJECT_DIR$/SQL/model.sql" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -132,7 +129,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vue.sql" pinned="false" current-in-tab="true">
+      <file leaf-file-name="vue.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SQL/vue.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
@@ -142,11 +139,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="model.sql" pinned="false" current-in-tab="false">
+      <file leaf-file-name="model.sql" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SQL/model.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="136" column="18" lean-forward="false" selection-start-line="136" selection-start-column="8" selection-end-line="136" selection-end-column="18" />
+            <state relative-caret-position="238">
+              <caret line="182" column="115" lean-forward="false" selection-start-line="182" selection-start-column="115" selection-end-line="182" selection-end-column="115" />
               <folding />
             </state>
           </provider>
@@ -240,13 +237,13 @@
         <option value="$PROJECT_DIR$/Pages/accueil.html" />
         <option value="$PROJECT_DIR$/Pages/style.css" />
         <option value="$PROJECT_DIR$/Pages/encherir.php" />
-        <option value="$PROJECT_DIR$/SQL/model.sql" />
         <option value="$PROJECT_DIR$/Pages/monCompte.php" />
         <option value="$PROJECT_DIR$/Pages/ajoutEspece.php" />
         <option value="$PROJECT_DIR$/Pages/ajoutLot.php" />
         <option value="$PROJECT_DIR$/Pages/gestion.php" />
         <option value="$PROJECT_DIR$/SQL/procedureStockee.sql" />
         <option value="$PROJECT_DIR$/SQL/vue.sql" />
+        <option value="$PROJECT_DIR$/SQL/model.sql" />
       </list>
     </option>
   </component>
@@ -804,15 +801,15 @@
       <workItem from="1494763869387" duration="64000" />
       <workItem from="1494764802438" duration="119000" />
       <workItem from="1494764960632" duration="39000" />
-      <workItem from="1495141893998" duration="4317000" />
+      <workItem from="1495141893998" duration="4856000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193355000" />
+    <option name="totallyTimeSpent" value="193894000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1267,18 +1264,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SQL/model.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="136" column="18" lean-forward="false" selection-start-line="136" selection-start-column="8" selection-end-line="136" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SQL/vue.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQL/model.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="182" column="115" lean-forward="false" selection-start-line="182" selection-start-column="115" selection-end-line="182" selection-end-column="115" />
           <folding />
         </state>
       </provider>
