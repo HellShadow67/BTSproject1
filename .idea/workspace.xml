@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd6f4940-de84-4681-b629-8cb5bd24e834" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SQL/procedureStockee.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SQL/vue.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Docs/TP.doc" afterPath="$PROJECT_DIR$/Docs/TP.doc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SQL/procedureStockee.sql" afterPath="$PROJECT_DIR$/SQL/procedureStockee.sql" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,8 +47,8 @@
       <file leaf-file-name="gestion.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pages/gestion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="39" column="9" lean-forward="false" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+            <state relative-caret-position="137">
+              <caret line="45" column="26" lean-forward="false" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
               <folding>
                 <marker date="1491054725893" expanded="true" signature="3151:3208" ph="SELECT nomBa... bateau" />
                 <marker date="1491054725893" expanded="true" signature="3869:3919" ph="SELECT nomCo... Espece" />
@@ -59,11 +61,60 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="monCompte.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pages/monCompte.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="137">
+              <caret line="272" column="550" lean-forward="false" selection-start-line="272" selection-start-column="550" selection-end-line="272" selection-end-column="557" />
+              <folding>
+                <marker date="1491053266332" expanded="true" signature="1744:1863" ph="Select login... acheteur" />
+                <marker date="1491053266332" expanded="true" signature="2373:4597" ph="..." />
+                <marker date="1491053266332" expanded="true" signature="2382:2556" ph="..." />
+                <marker date="1491053266332" expanded="true" signature="2578:4575" ph="..." />
+                <marker date="1491053266332" expanded="true" signature="2624:2653" ph="..." />
+                <marker date="1491053266332" expanded="true" signature="2682:3248" ph="..." />
+                <marker date="1491053266332" expanded="true" signature="2709:2779" ph="..." />
+                <marker date="1491053266332" expanded="true" signature="3306:3312" ph="..." />
+                <marker date="1491053266332" expanded="true" signature="3446:4552" ph="..." />
+                <marker date="1491053266332" expanded="true" signature="3563:4536" ph="..." />
+                <marker date="1491053266332" expanded="true" signature="3576:4469" ph="..." />
+                <marker date="1491053266332" expanded="true" signature="3603:3747" ph="..." />
+                <marker date="1491053266332" expanded="true" signature="3670:3677" ph="&amp;##9888;" />
+                <marker date="1491053266332" expanded="true" signature="3724:3731" ph="&amp;##9888;" />
+                <marker date="1491053266332" expanded="true" signature="4358:4365" ph="&amp;##9888;" />
+                <marker date="1491053266332" expanded="true" signature="4429:4436" ph="&amp;##9888;" />
+                <marker date="1491053266332" expanded="true" signature="4626:4698" ph="Select idAch... acheteur" />
+                <marker date="1491053266332" expanded="true" signature="4926:5294" ph="Select l.dat... lot" />
+                <marker date="1491053266332" expanded="true" signature="5523:5721" ph="..." />
+                <marker date="1491053266332" expanded="true" signature="6227:6785" ph="Select prixP... lot" />
+                <marker date="1491053266332" expanded="true" signature="7015:7178" ph="..." />
+                <marker date="1491053266332" expanded="true" signature="8837:8935" ph="Select login... crieur" />
+                <marker date="1491053266332" expanded="true" signature="9418:11467" ph="..." />
+                <marker date="1491053266332" expanded="true" signature="9427:9542" ph="..." />
+                <marker date="1491053266332" expanded="true" signature="9565:11441" ph="..." />
+                <marker date="1491053266332" expanded="true" signature="9611:9640" ph="..." />
+                <marker date="1491053266332" expanded="true" signature="9669:10199" ph="..." />
+                <marker date="1491053266332" expanded="true" signature="9696:9763" ph="..." />
+                <marker date="1491053266332" expanded="true" signature="10257:10263" ph="..." />
+                <marker date="1491053266332" expanded="true" signature="10397:11419" ph="..." />
+                <marker date="1491053266332" expanded="true" signature="10514:11403" ph="..." />
+                <marker date="1491053266332" expanded="true" signature="10527:11336" ph="..." />
+                <marker date="1491053266332" expanded="true" signature="10554:10698" ph="..." />
+                <marker date="1491053266332" expanded="true" signature="10621:10628" ph="&amp;##9888;" />
+                <marker date="1491053266332" expanded="true" signature="10675:10682" ph="&amp;##9888;" />
+                <marker date="1491053266332" expanded="true" signature="11496:11564" ph="Select idCri... crieur" />
+                <marker date="1491053266332" expanded="true" signature="11796:12383" ph="Select prixP... lot" />
+                <marker date="1491053266332" expanded="true" signature="12586:12749" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ajoutBateau.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pages/ajoutBateau.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="116" />
               <folding>
                 <marker date="1490795155798" expanded="true" signature="253:347" ph="insert into bateau... " />
               </folding>
@@ -71,11 +122,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="procedureStockee.sql" pinned="false" current-in-tab="true">
+      <file leaf-file-name="procedureStockee.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SQL/procedureStockee.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="11" lean-forward="false" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
+            <state relative-caret-position="140">
+              <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vue.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SQL/vue.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -84,8 +145,8 @@
       <file leaf-file-name="model.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SQL/model.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="55" column="14" lean-forward="false" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="14" />
+            <state relative-caret-position="327">
+              <caret line="136" column="18" lean-forward="false" selection-start-line="136" selection-start-column="8" selection-end-line="136" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -104,7 +165,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>selectio</find>
       <find>2017-08</find>
       <find>2017-03-10</find>
       <find>2017-03-11</find>
@@ -134,6 +194,7 @@
       <find>Poiss</find>
       <find>brut</find>
       <find>cri</find>
+      <find>idA</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -185,6 +246,7 @@
         <option value="$PROJECT_DIR$/Pages/ajoutLot.php" />
         <option value="$PROJECT_DIR$/Pages/gestion.php" />
         <option value="$PROJECT_DIR$/SQL/procedureStockee.sql" />
+        <option value="$PROJECT_DIR$/SQL/vue.sql" />
       </list>
     </option>
   </component>
@@ -248,7 +310,17 @@
             <path>
               <item name="laCriee" type="b2602c69:ProjectViewProjectNode" />
               <item name="laCriee" type="462c0819:PsiDirectoryNode" />
+              <item name="Docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="laCriee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="laCriee" type="462c0819:PsiDirectoryNode" />
               <item name="Pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="laCriee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="laCriee" type="462c0819:PsiDirectoryNode" />
+              <item name="SQL" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -732,15 +804,16 @@
       <workItem from="1494763869387" duration="64000" />
       <workItem from="1494764802438" duration="119000" />
       <workItem from="1494764960632" duration="39000" />
-      <workItem from="1495141893998" duration="1311000" />
+      <workItem from="1495141893998" duration="4317000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190349000" />
+    <option name="totallyTimeSpent" value="193355000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -754,7 +827,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14674735" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14674735" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962063" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -839,13 +912,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Classes/Acheteur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pages/accueil.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
@@ -1047,13 +1113,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/monCompte.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3757">
-          <caret line="272" column="513" lean-forward="false" selection-start-line="272" selection-start-column="513" selection-end-line="272" selection-end-column="513" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pages/encherir.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -1128,10 +1187,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/ajoutBateau.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="116" />
+          <folding>
+            <marker date="1490795155798" expanded="true" signature="253:347" ph="insert into bateau... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQL/procedureStockee.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Pages/gestion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="39" column="9" lean-forward="false" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+        <state relative-caret-position="137">
+          <caret line="45" column="26" lean-forward="false" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
           <folding>
             <marker date="1491054725893" expanded="true" signature="3151:3208" ph="SELECT nomBa... bateau" />
             <marker date="1491054725893" expanded="true" signature="3869:3919" ph="SELECT nomCo... Espece" />
@@ -1143,28 +1220,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/ajoutBateau.php">
+    <entry file="file://$PROJECT_DIR$/Pages/monCompte.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="137">
+          <caret line="272" column="550" lean-forward="false" selection-start-line="272" selection-start-column="550" selection-end-line="272" selection-end-column="557" />
           <folding>
-            <marker date="1490795155798" expanded="true" signature="253:347" ph="insert into bateau... " />
+            <marker date="1491053266332" expanded="true" signature="1744:1863" ph="Select login... acheteur" />
+            <marker date="1491053266332" expanded="true" signature="2373:4597" ph="..." />
+            <marker date="1491053266332" expanded="true" signature="2382:2556" ph="..." />
+            <marker date="1491053266332" expanded="true" signature="2578:4575" ph="..." />
+            <marker date="1491053266332" expanded="true" signature="2624:2653" ph="..." />
+            <marker date="1491053266332" expanded="true" signature="2682:3248" ph="..." />
+            <marker date="1491053266332" expanded="true" signature="2709:2779" ph="..." />
+            <marker date="1491053266332" expanded="true" signature="3306:3312" ph="..." />
+            <marker date="1491053266332" expanded="true" signature="3446:4552" ph="..." />
+            <marker date="1491053266332" expanded="true" signature="3563:4536" ph="..." />
+            <marker date="1491053266332" expanded="true" signature="3576:4469" ph="..." />
+            <marker date="1491053266332" expanded="true" signature="3603:3747" ph="..." />
+            <marker date="1491053266332" expanded="true" signature="3670:3677" ph="&amp;##9888;" />
+            <marker date="1491053266332" expanded="true" signature="3724:3731" ph="&amp;##9888;" />
+            <marker date="1491053266332" expanded="true" signature="4358:4365" ph="&amp;##9888;" />
+            <marker date="1491053266332" expanded="true" signature="4429:4436" ph="&amp;##9888;" />
+            <marker date="1491053266332" expanded="true" signature="4626:4698" ph="Select idAch... acheteur" />
+            <marker date="1491053266332" expanded="true" signature="4926:5294" ph="Select l.dat... lot" />
+            <marker date="1491053266332" expanded="true" signature="5523:5721" ph="..." />
+            <marker date="1491053266332" expanded="true" signature="6227:6785" ph="Select prixP... lot" />
+            <marker date="1491053266332" expanded="true" signature="7015:7178" ph="..." />
+            <marker date="1491053266332" expanded="true" signature="8837:8935" ph="Select login... crieur" />
+            <marker date="1491053266332" expanded="true" signature="9418:11467" ph="..." />
+            <marker date="1491053266332" expanded="true" signature="9427:9542" ph="..." />
+            <marker date="1491053266332" expanded="true" signature="9565:11441" ph="..." />
+            <marker date="1491053266332" expanded="true" signature="9611:9640" ph="..." />
+            <marker date="1491053266332" expanded="true" signature="9669:10199" ph="..." />
+            <marker date="1491053266332" expanded="true" signature="9696:9763" ph="..." />
+            <marker date="1491053266332" expanded="true" signature="10257:10263" ph="..." />
+            <marker date="1491053266332" expanded="true" signature="10397:11419" ph="..." />
+            <marker date="1491053266332" expanded="true" signature="10514:11403" ph="..." />
+            <marker date="1491053266332" expanded="true" signature="10527:11336" ph="..." />
+            <marker date="1491053266332" expanded="true" signature="10554:10698" ph="..." />
+            <marker date="1491053266332" expanded="true" signature="10621:10628" ph="&amp;##9888;" />
+            <marker date="1491053266332" expanded="true" signature="10675:10682" ph="&amp;##9888;" />
+            <marker date="1491053266332" expanded="true" signature="11496:11564" ph="Select idCri... crieur" />
+            <marker date="1491053266332" expanded="true" signature="11796:12383" ph="Select prixP... lot" />
+            <marker date="1491053266332" expanded="true" signature="12586:12749" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SQL/model.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="55" column="14" lean-forward="false" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="14" />
+        <state relative-caret-position="327">
+          <caret line="136" column="18" lean-forward="false" selection-start-line="136" selection-start-column="8" selection-end-line="136" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SQL/procedureStockee.sql">
+    <entry file="file://$PROJECT_DIR$/SQL/vue.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="11" lean-forward="false" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
+        <state relative-caret-position="102">
+          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
           <folding />
         </state>
       </provider>

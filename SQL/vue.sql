@@ -1,0 +1,7 @@
+CREATE VIEW V_lot
+
+AS SELECT *
+
+FROM Lot
+
+WHERE idAcheteur IS NULL;
