@@ -151,7 +151,17 @@ CREATE TABLE Presentation(
         PRIMARY KEY (idPres )
 )ENGINE=InnoDB;
 
+#------------------------------------------------------------
+# Table: Vehicule
+#------------------------------------------------------------
 
+CREATE TABLE Vehicule(
+        idVeh    int NOT NULL AUTO_INCREMENT,
+		    immatriculationVeh    Varchar (25) INT NOT NULL ,
+        modeleVeh        Varchar (25) NOT NULL ,
+        marqueVeh   Varchar (25) NOT NULL ,
+        PRIMARY KEY (idVeh)
+)ENGINE=InnoDB;
 
 #------------------------------------------------------------
 # Table: Poster
@@ -164,9 +174,46 @@ CREATE TABLE Poster(
         idAcheteur   Varchar (25) NOT NULL ,
 	    	prixEnchere  float ,
 	    	heureEnchere datetime,
+	    	idVeh int,
         PRIMARY KEY (idLot ,datePeche ,idBateau ,idAcheteur )
 )ENGINE=InnoDB;
 
+#------------------------------------------------------------
+# Table: DateLivraison
+#------------------------------------------------------------
+
+CREATE TABLE DateLivraison(
+        dateLivraison  Date NOT NULL ,
+        PRIMARY KEY (dateLivraison)
+)ENGINE=InnoDB;
+
+#------------------------------------------------------------
+# Table: Creneau
+#------------------------------------------------------------
+
+CREATE TABLE Creneau(
+        idCreneau    Date NOT NULL ,
+		    libelle    Varchar (25) NOT NULL ,
+        PRIMARY KEY (idCreneau)
+)ENGINE=InnoDB;
+
+#------------------------------------------------------------
+# Table: Reservation
+#------------------------------------------------------------
+
+CREATE TABLE Reservation(
+        idVeh    int NOT NULL ,
+		    idCreneau    INT NOT NULL ,
+        dateLivraison        date NOT NULL ,
+        disponibilite Varchar (25) NOT NULL   ,
+	    	idLot int,
+        PRIMARY KEY (idVeh ,dateLivraison ,idCreneau)
+)ENGINE=InnoDB;
+
+ALTER TABLE Reservation ADD CONSTRAINT FK_Reservation_idVeh FOREIGN KEY (idVeh) REFERENCES Vehicule(idVeh) ON DELETE CASCADE;
+ALTER TABLE Reservation ADD CONSTRAINT FK_Reservation_idCreneau FOREIGN KEY (idCreneau) REFERENCES Creneau(idCreneau) ON DELETE CASCADE;
+ALTER TABLE Reservation ADD CONSTRAINT FK_Reservation_dateLivraison FOREIGN KEY (dateLivraison) REFERENCES DateLivraison(dateLivraison) ON DELETE CASCADE;
+ALTER TABLE Poster ADD CONSTRAINT FK_Poster_idVeh FOREIGN KEY (idVeh) REFERENCES Vehicule(idVeh) ON DELETE CASCADE;
 ALTER TABLE Peche ADD CONSTRAINT FK_Peche_idBateau FOREIGN KEY (idBateau) REFERENCES Bateau(idBateau) ON DELETE CASCADE;
 ALTER TABLE Lot ADD CONSTRAINT FK_Lot_datePeche FOREIGN KEY (datePeche) REFERENCES Peche(datePeche) ON DELETE CASCADE;
 ALTER TABLE Lot ADD CONSTRAINT FK_Lot_idBateau FOREIGN KEY (idBateau) REFERENCES Peche(idBateau) ON DELETE CASCADE;
